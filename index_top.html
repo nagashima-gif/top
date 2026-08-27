@@ -29,10 +29,14 @@
   .logo{font-family:var(--disp);font-weight:900;font-size:20px;color:var(--green);display:flex;align-items:center;gap:6px;text-decoration:none}
   .logo .mark{display:inline-grid;place-items:center;width:26px;height:26px;background:var(--green);color:#fff;border-radius:7px;font-size:17px}
   .hnav{display:flex;align-items:center;gap:22px;font-size:13.5px}
-  .hnav a{text-decoration:none;color:var(--muted);font-weight:500}
+  .hnav a{text-decoration:none;color:var(--muted);font-weight:500;white-space:nowrap}
   .hnav a:hover{color:var(--green)}
   .hnav .badge{color:var(--green);font-weight:700;border:1px solid var(--border);padding:5px 10px;border-radius:6px;background:#fff}
-  @media(max-width:820px){.hnav .link-hide{display:none}}
+  @media(max-width:820px){.hnav{gap:14px;font-size:12.5px}}
+  @media(max-width:600px){
+    .hbar{flex-wrap:wrap;height:auto;padding:10px 0;gap:8px}
+    .hnav{width:100%;justify-content:center;flex-wrap:wrap;gap:10px 16px}
+  }
 
   /* hero */
   .hero{background:linear-gradient(180deg,var(--tint) 0%,var(--paper) 100%);padding:64px 0 40px;position:relative;overflow:hidden;text-align:center}
@@ -170,9 +174,9 @@
   <div class="wrap hbar">
     <a href="/" class="logo"><span class="mark">＋</span>薬剤師バンク</a>
     <nav class="hnav">
-      <a class="link-hide" href="/pharmacy/">薬局の方へ</a>
-      <a class="link-hide" href="/pharmacist/">薬剤師の方へ</a>
-      <a class="link-hide" href="/magazine/">マガジン</a>
+      <a href="/pharmacy/">薬局の方へ</a>
+      <a href="/pharmacist/">薬剤師の方へ</a>
+      <a href="/magazine/">マガジン</a>
       <a class="badge" href="/company/">運営会社</a>
     </nav>
   </div>
