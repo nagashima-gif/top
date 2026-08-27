@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>薬剤師の採用は「まず一緒に働く」から｜薬剤師バンク（薬局向け）</title>
+<meta name="description" content="業務委託でお試し稼働してから、双方合意で社員へ。採用ミスマッチと突然の欠員リスクをなくす、現役薬剤師が運営する薬局向け採用サービス。初期費用・登録料0円の完全成果報酬。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#152A20;          /* 深い薬局グリーンの黒 */
+    --green:#1C6B49;         /* メインの薬局グリーン */
+    --green-deep:#124d34;
+    --leaf:#2FA26A;          /* 明るいアクセント（CTA） */
+    --tint:#E9F3EC;          /* セクション背景の薄緑 */
+    --tint2:#F3F8F4;
+    --paper:#FBFCFA;         /* 清潔な白 */
+    --muted:#5C6C63;
+    --amber:#D98A2B;         /* 欠員リスクの注意色（控えめ） */
+    --border:#D9E4DC;
+    --disp:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+    --body:"Noto Sans JP",-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  .narrow{max-width:760px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{font-family:var(--disp);line-height:1.4;letter-spacing:.01em}
+  a{color:inherit}
+  img{max-width:100%}
+
+  /* 十字モチーフ（薬局のシグネチャ） */
+  .plus{color:var(--leaf);font-weight:900;font-family:var(--disp)}
+
+  /* ===== Header ===== */
+  header{position:sticky;top:0;z-index:50;background:rgba(251,252,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+  .hbar{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .logo{font-family:var(--disp);font-weight:900;font-size:20px;color:var(--green);display:flex;align-items:center;gap:6px}
+  .logo .mark{display:inline-grid;place-items:center;width:26px;height:26px;background:var(--green);color:#fff;border-radius:7px;font-size:17px}
+  .hnav{display:flex;align-items:center;gap:22px;font-size:13.5px}
+  .hnav a{text-decoration:none;color:var(--muted);font-weight:500}
+  .hnav a:hover{color:var(--green)}
+  .hcta{background:var(--leaf);color:#fff;padding:9px 16px;border-radius:999px;font-weight:700;font-size:13.5px;text-decoration:none}
+  .hnav .badge{color:var(--green);font-weight:700;border:1px solid var(--border);padding:5px 10px;border-radius:6px;background:#fff}
+  @media(max-width:820px){.hnav .link-hide{display:none}}
+
+  /* ===== Hero ===== */
+  .hero{background:linear-gradient(180deg,var(--tint) 0%,var(--paper) 100%);padding:60px 0 50px;position:relative;overflow:hidden}
+  .hero::before{content:"＋";position:absolute;top:-30px;right:-10px;font-family:var(--disp);font-weight:900;font-size:340px;color:#1c6b49;opacity:.05;line-height:1}
+  .eyebrow{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--border);color:var(--green);font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;margin-bottom:22px}
+  h1{font-size:clamp(30px,5.4vw,50px);font-weight:900;color:var(--ink)}
+  h1 .hl{color:var(--green);position:relative}
+  h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.28em;background:rgba(47,162,106,.22);z-index:-1}
+  .lead{margin-top:22px;font-size:clamp(15px,2vw,18px);color:#39473f;max-width:620px;font-weight:500}
+
+  /* intent 2-choice */
+  .intent{margin-top:32px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px;max-width:560px;box-shadow:0 6px 24px rgba(20,42,32,.06)}
+  .intent p{font-family:var(--disp);font-weight:700;font-size:15px;margin-bottom:14px}
+  .intent .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .opt{display:block;text-align:center;text-decoration:none;border:1.5px solid var(--border);border-radius:11px;padding:14px 10px;font-weight:700;font-size:14.5px;color:var(--ink);transition:.15s}
+  .opt small{display:block;font-weight:500;font-size:12px;color:var(--muted);margin-top:3px}
+  .opt:hover{border-color:var(--leaf);background:var(--tint2);transform:translateY(-2px)}
+  .opt .u{color:var(--amber)}
+  @media(max-width:520px){.intent .opts{grid-template-columns:1fr}}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px;max-width:620px}
+  .stat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 14px;text-align:center}
+  .stat .big{font-family:var(--disp);font-weight:900;font-size:17px;color:var(--green);line-height:1.35}
+  .stat small{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
+  @media(max-width:640px){.stats{grid-template-columns:1fr;gap:8px}.stat{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 16px}.stat .big{font-size:15px}.stat small{margin-top:0}}
+
+  /* ===== section frame ===== */
+  section{padding:64px 0}
+  .kicker{display:block;font-family:var(--disp);font-weight:700;color:var(--leaf);font-size:13px;letter-spacing:.12em;text-align:center;margin-bottom:10px}
+  .h2{font-size:clamp(23px,3.6vw,32px);font-weight:900;text-align:center;color:var(--ink)}
+  .h2 .plus{margin:0 2px}
+  .sub-c{text-align:center;color:var(--muted);margin-top:14px;font-weight:500}
+
+  /* pains */
+  .pains{background:var(--tint2)}
+  .paingrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+  .pain{background:#fff;border:1px solid var(--border);border-radius:14px;padding:26px 22px}
+  .pain .no{font-family:var(--disp);font-weight:900;color:var(--amber);font-size:14px;letter-spacing:.1em}
+  .pain h3{font-size:18px;margin:10px 0 8px;font-weight:700}
+  .pain p{font-size:14px;color:var(--muted);line-height:1.8}
+  @media(max-width:760px){.paingrid{grid-template-columns:1fr;gap:12px}}
+
+  /* solution steps */
+  .flow3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:44px;position:relative}
+  .fcard{background:linear-gradient(180deg,#fff,var(--tint2));border:1px solid var(--border);border-radius:14px;padding:26px 20px;text-align:center}
+  .fcard .step{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--disp);font-weight:900;margin-bottom:14px}
+  .fcard h3{font-size:17px;font-weight:700;margin-bottom:8px}
+  .fcard p{font-size:13.5px;color:var(--muted)}
+  .fcard .tag{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:var(--green);background:var(--tint);padding:4px 10px;border-radius:999px}
+  @media(max-width:760px){.flow3{grid-template-columns:1fr}}
+
+  /* reasons */
+  .reasons{background:var(--green);color:#fff}
+  .reasons .kicker{color:#a7e3c3}
+  .reasons .h2{color:#fff}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+  .rcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:28px 22px}
+  .rcard .rn{font-family:var(--disp);font-weight:900;font-size:15px;color:#a7e3c3;display:flex;align-items:center;gap:8px}
+  .rcard h3{font-size:19px;margin:12px 0 10px;font-weight:700;color:#fff}
+  .rcard p{font-size:14px;color:#d6ede0;line-height:1.85}
+  @media(max-width:760px){.rgrid{grid-template-columns:1fr;gap:12px}}
+
+  /* services hub */
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}
+  .scard{border:1px solid var(--border);border-radius:14px;padding:26px 22px;background:#fff;display:flex;flex-direction:column}
+  .scard .ico{font-family:var(--disp);font-weight:900;color:var(--leaf);font-size:22px;margin-bottom:8px}
+  .scard h3{font-size:18px;font-weight:700;margin-bottom:10px}
+  .scard p{font-size:14px;color:var(--muted);flex:1}
+  .scard .go{margin-top:16px;font-weight:700;color:var(--green);font-size:14px;text-decoration:none}
+  @media(max-width:760px){.svc{grid-template-columns:1fr;gap:12px}}
+
+  /* steps timeline */
+  .steps{background:var(--tint2)}
+  .tl{margin-top:40px;max-width:720px;margin-left:auto;margin-right:auto}
+  .tli{display:flex;gap:18px;padding:16px 0;border-bottom:1px dashed var(--border)}
+  .tli:last-child{border-bottom:none}
+  .tli .n{flex:none;width:42px;height:42px;border-radius:10px;background:#fff;border:1.5px solid var(--green);color:var(--green);font-family:var(--disp);font-weight:900;display:grid;place-items:center}
+  .tli h3{font-size:16px;font-weight:700;margin-bottom:3px}
+  .tli p{font-size:13.5px;color:var(--muted)}
+
+  /* pricing */
+  .price-box{max-width:720px;margin:40px auto 0;background:#fff;border:1px solid var(--border);border-radius:16px;padding:30px 28px}
+  .price-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border)}
+  .price-row:last-child{border-bottom:none}
+  .price-row .ic{color:var(--leaf);font-family:var(--disp);font-weight:900;flex:none}
+  .price-row h3{font-size:16px;font-weight:700;margin-bottom:3px}
+  .price-row p{font-size:13.5px;color:var(--muted)}
+  .price-note{text-align:center;color:var(--muted);font-size:12.5px;margin-top:18px}
+
+  /* who / social proof */
+  .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  .who{background:var(--tint);border-radius:14px;padding:24px 20px}
+  .who .q{font-family:var(--disp);color:var(--green);font-weight:900;font-size:26px;line-height:1}
+  .who p{font-size:14.5px;font-weight:500;margin-top:10px}
+  .area{text-align:center;margin-top:28px;font-size:14px;color:var(--muted)}
+  .area b{color:var(--ink)}
+  @media(max-width:760px){.who-grid{grid-template-columns:1fr;gap:12px}}
+
+  /* faq */
+  .faq{max-width:760px;margin:40px auto 0}
+  details{background:#fff;border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden}
+  summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:700;font-size:15px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"＋";color:var(--leaf);font-family:var(--disp);font-weight:900;font-size:20px;transition:.2s;flex:none}
+  details[open] summary::after{transform:rotate(45deg)}
+  details .a{padding:0 22px 20px;color:var(--muted);font-size:14px;line-height:1.85}
+
+  /* trust / operator */
+  .trust{background:var(--ink);color:#fff}
+  .trust .h2{color:#fff}
+  .trust .kicker{color:#a7e3c3}
+  .tcard{max-width:680px;margin:36px auto 0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:30px 28px;text-align:center}
+  .tcard .avatar{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--leaf),var(--green));margin:0 auto 16px;display:grid;place-items:center;font-family:var(--disp);font-weight:900;font-size:30px;color:#fff}
+  .tcard h3{font-size:19px;color:#fff;margin-bottom:8px}
+  .tcard p{color:#cfe6d9;font-size:14px}
+  .tcard .lic{margin-top:16px;font-size:12.5px;color:#a7e3c3;border-top:1px solid rgba(255,255,255,.14);padding-top:14px}
+
+  /* final CTA */
+  .final{background:linear-gradient(135deg,var(--green) 0%,var(--green-deep) 100%);color:#fff;text-align:center}
+  .final h2{font-size:clamp(24px,4vw,34px);font-weight:900;color:#fff}
+  .final p{margin-top:16px;color:#d6ede0;font-weight:500}
+  .gift{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px dashed rgba(255,255,255,.4);border-radius:10px;padding:10px 18px;margin-top:22px;font-size:13.5px;font-weight:700}
+  .bigcta{display:inline-flex;align-items:center;gap:10px;background:var(--leaf);color:#fff;font-family:var(--disp);font-weight:900;font-size:18px;text-decoration:none;padding:18px 40px;border-radius:999px;margin-top:26px;box-shadow:0 10px 30px rgba(0,0,0,.18);transition:.15s}
+  .bigcta:hover{transform:translateY(-2px)}
+  .final small{display:block;margin-top:14px;color:#bfe0cd;font-size:12px}
+
+  /* footer */
+  footer{background:var(--ink);color:#9fb4a8;padding:40px 0 60px;font-size:13px;border-top:1px solid rgba(255,255,255,.08)}
+  .fbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+  footer a{color:#cfe0d6;text-decoration:none;margin-right:18px}
+  footer a:hover{color:#fff}
+  .flic{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);color:#8aa294}
+
+  /* mobile sticky cta */
+  .mcta{display:none}
+  @media(max-width:820px){
+    .mcta{display:block;position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:1px solid var(--border);padding:10px 16px}
+    .mcta a{display:block;background:var(--leaf);color:#fff;text-align:center;font-weight:800;padding:14px;border-radius:12px;text-decoration:none;font-family:var(--disp)}
+    body{padding-bottom:74px}
+  }
+
+  /* contact form */
+  .cform{max-width:620px;margin:26px auto 0;background:#fff;border-radius:16px;padding:28px 26px;text-align:left;color:var(--ink);box-shadow:0 14px 40px rgba(0,0,0,.2)}
+  .cform fieldset{border:none;margin-bottom:20px}
+  .cform legend{font-family:var(--disp);font-weight:700;font-size:15px;margin-bottom:12px;color:var(--ink)}
+  .chk label{display:flex;align-items:flex-start;gap:9px;background:var(--tint2);border:1px solid var(--border);border-radius:9px;padding:11px 14px;margin-bottom:8px;font-size:14px;font-weight:500;cursor:pointer;transition:.12s}
+  .chk label:hover{border-color:var(--leaf);background:var(--tint)}
+  .chk input{margin-top:4px;accent-color:var(--green);flex:none;width:17px;height:17px}
+  .cform .frow{margin-bottom:14px}
+  .cform .frow2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+  .frow label,.frow2 label{display:block;font-size:13px;font-weight:700;color:var(--ink)}
+  .frow label span,.frow2 label span{font-weight:700;font-size:11px;color:#fff;background:var(--leaf);border-radius:4px;padding:1px 7px;margin-left:8px}
+  .frow label span.opt,.frow2 label span.opt{background:var(--muted)}
+  .cform input[type=text],.cform input[type=email],.cform input[type=tel],.cform textarea{width:100%;margin-top:7px;border:1.5px solid var(--border);border-radius:9px;padding:11px 13px;font-family:var(--body);font-size:15px;color:var(--ink);background:#fff}
+  .cform textarea{resize:vertical}
+  .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--leaf);box-shadow:0 0 0 3px rgba(47,162,106,.15)}
+  .consent{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin:4px 0 18px}
+  .consent input{accent-color:var(--green);width:16px;height:16px;flex:none}
+  .consent a{color:var(--green);text-decoration:underline}
+  .fbtn{width:100%;background:var(--leaf);color:#fff;border:none;font-family:var(--disp);font-weight:900;font-size:17px;padding:16px;border-radius:12px;cursor:pointer;transition:.15s}
+  .fbtn:hover{background:var(--green);transform:translateY(-1px)}
+  .cform small{display:block;text-align:center;color:var(--muted);font-size:12px;margin-top:12px}
+  @media(max-width:520px){.cform .frow2{grid-template-columns:1fr}}
+  /* service video */
+  .video-frame{max-width:760px;margin:36px auto 0}
+  .video-facade{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;cursor:pointer;background:linear-gradient(135deg,var(--green),var(--green-deep));display:grid;place-items:center;border:1px solid var(--border)}
+  .video-facade::before{content:"＋";position:absolute;font-family:var(--disp);font-weight:900;font-size:280px;color:#fff;opacity:.06;line-height:1}
+  .vf-inner{text-align:center;color:#fff;position:relative;z-index:1;padding:20px}
+  .vf-badge{display:inline-block;background:rgba(255,255,255,.14);border:1px dashed rgba(255,255,255,.5);border-radius:999px;padding:5px 14px;font-size:12px;font-weight:700;margin-bottom:18px}
+  .play{width:76px;height:76px;border-radius:50%;background:#fff;display:grid;place-items:center;margin:0 auto 16px;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:.15s}
+  .play span{color:var(--green);font-size:26px;margin-left:5px}
+  .video-facade:hover .play,.video-facade:focus-visible .play{transform:scale(1.08)}
+  .vf-note{font-size:14px;font-weight:600;color:#eafff3}
+  .vf-note small{font-weight:400;color:#bfe0cd;font-size:12px}
+  .video-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .draft-note{background:#FFF6E5;border:1px dashed var(--amber);color:#7a5410;font-size:12.5px;padding:10px 16px;text-align:center}
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{opacity:0;transform:translateY(18px);transition:.6s ease}
+    .reveal.in{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="draft-note">これは /pharmacy/ LPのコピー入りドラフト（叩き台）です。● は要記入（フォーム送信先・許可番号・代表名・対応エリア等）。</div>
+
+<header>
+  <div class="wrap hbar">
+    <a href="/index_top.html" class="logo"><span class="mark">＋</span>薬剤師バンク</a>
+    <nav class="hnav">
+      <a class="link-hide" href="#reasons">選ばれる理由</a>
+      <a class="link-hide" href="#flow">ご利用の流れ</a>
+      <a class="link-hide" href="#faq">よくある質問</a>
+      <a class="link-hide" href="/pharmacist/">薬剤師の方はこちら</a>
+      <a class="hcta" href="#contact">無料相談・お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">＋ 現役薬剤師が運営する薬局向け採用サービス</span>
+    <h1>薬剤師の採用は、<br><span class="hl">「まず一緒に働く」</span>から。</h1>
+    <p class="lead">業務委託でお試し稼働 → 双方が「合う」と思えたら、社員へ。<br>採用のミスマッチと、突然の欠員リスクを、"先に働いてもらう"ことでなくします。</p>
+
+    <div class="intent">
+      <p>いまの状況に近いのは？</p>
+      <div class="opts">
+        <a class="opt" href="#contact">今すぐ<span class="u">人手</span>が足りない<small>欠員・急な退職でお困り</small></a>
+        <a class="opt" href="#contact">まず相談・情報収集したい<small>採用のやり方から見直したい</small></a>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><span class="big">現役薬剤師<br>が運営</span><small>管理薬剤師資格を保有。現場が分かる</small></div>
+      <div class="stat"><span class="big">初期費用・<br>登録料 0円</span><small>完全成果報酬。決まるまで無料</small></div>
+      <div class="stat"><span class="big">"お試し"<br>してから採用</span><small>業務委託で相性を確かめてから社員化</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAINS -->
+<section class="pains">
+  <div class="wrap">
+    <span class="kicker">SUCH ISSUES?</span>
+    <h2 class="h2">薬局の採用、こんな悩みはありませんか</h2>
+    <div class="paingrid">
+      <div class="pain reveal">
+        <span class="no">01</span>
+        <h3>急な退職で、明日が埋まらない</h3>
+        <p>管理薬剤師が一人しかいない。産休・急な退職で、シフトが組めず薬局を開けられない——売上に直撃するのに、すぐ人は見つからない。</p>
+      </div>
+      <div class="pain reveal">
+        <span class="no">02</span>
+        <h3>採ってもすぐ辞める</h3>
+        <p>面接では良かったのに、入ってみたら現場と合わない。採り直しのたびに時間もコストも消える。ミスマッチが一番痛い。</p>
+      </div>
+      <div class="pain reveal">
+        <span class="no">03</span>
+        <h3>紹介料が高くて踏み切れない</h3>
+        <p>合うか分からない相手に、いきなり数百万の紹介料。失敗したときのリスクが大きすぎて、採用に動けない。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution">
+  <div class="wrap">
+    <span class="kicker">OUR SOLUTION</span>
+    <h2 class="h2">答えは、<span class="plus">＋</span>「先に働いてもらう」こと。</h2>
+    <p class="sub-c">書類と面接だけで決めない。実際の仕事ぶりを見てから、採用を決められます。</p>
+    <div class="flow3">
+      <div class="fcard reveal">
+        <span class="step">1</span>
+        <h3>まず業務委託で来てもらう</h3>
+        <p>必要なときだけ薬剤師が稼働。費用は使った月だけなので、低リスクで始められます。</p>
+      </div>
+      <div class="fcard reveal">
+        <span class="step">2</span>
+        <h3>現場との相性を見極める</h3>
+        <p>実際の調剤・接遇・チームとの相性を、働きぶりで確認。"採ってみないと分からない"をなくします。</p>
+      </div>
+      <div class="fcard reveal">
+        <span class="step">3</span>
+        <h3>合えば、社員へ</h3>
+        <p>双方が「合う」と思えたら直接雇用へ。<br>これまでの委託費は紹介料から差し引き。</p>
+        <span class="tag">二重には払わせません</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE VIDEO -->
+<section id="video">
+  <div class="wrap">
+    <span class="kicker">MOVIE</span>
+    <h2 class="h2">1分でわかる、薬剤師バンク</h2>
+    <p class="sub-c">現役薬剤師が、"お試し登用"の仕組みを直接ご説明します。</p>
+    <div class="video-frame">
+      <!-- 本番化：data-yt に YouTube動画ID（URLの watch?v=●●● の●部分）を入れると、クリックで再生されます -->
+      <div class="video-facade" data-yt="●YOUTUBE_ID" role="button" tabindex="0" aria-label="サービス説明動画を再生">
+        <div class="vf-inner">
+          <div class="vf-badge">＋ 動画プレースホルダー</div>
+          <div class="play"><span>▶</span></div>
+          <p class="vf-note">ここにサービス説明動画（1〜2分）が入ります<br><small>YouTube公開後、data-yt に動画IDを差し替えてください</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section class="reasons" id="reasons">
+  <div class="wrap">
+    <span class="kicker">WHY US</span>
+    <h2 class="h2">薬剤師バンクが選ばれる理由</h2>
+    <div class="rgrid">
+      <div class="rcard reveal">
+        <div class="rn"><span class="plus">＋</span>01</div>
+        <h3>現役薬剤師が運営</h3>
+        <p>採用担当ではなく、現場を知る薬剤師がマッチング。「この薬局に、この人が合うか」を薬剤師の目線で見極めます。</p>
+      </div>
+      <div class="rcard reveal">
+        <div class="rn"><span class="plus">＋</span>02</div>
+        <h3>初期費用0円・完全成果報酬</h3>
+        <p>登録も相談も、採用が決まるまで費用はゼロ。リスクを負わずに、まず始められます。</p>
+      </div>
+      <div class="rcard reveal">
+        <div class="rn"><span class="plus">＋</span>03</div>
+        <h3>"先に働く"からミスマッチが起きない</h3>
+        <p>お試しの業務委託期間で相性を確認してから採用。早期離職の"採り直しコスト"を根本からなくします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <span class="kicker">SERVICES</span>
+    <h2 class="h2">3つの入口から、ご相談いただけます</h2>
+    <div class="svc">
+      <div class="scard reveal">
+        <div class="ico">＋</div>
+        <h3>無料アセスメント</h3>
+        <p>現役薬剤師が、あなたの薬局の欠員リスク・採用競争力・定着課題を無料で診断。まずここから。</p>
+        <a class="go" href="#contact">診断を申し込む →</a>
+      </div>
+      <div class="scard reveal">
+        <div class="ico">＋</div>
+        <h3>人員保険サブスク</h3>
+        <p>欠員を"保険"で備える。必要なときだけ薬剤師を手配、使った月だけの費用で薬局を止めません。</p>
+        <a class="go" href="#contact">仕組みを相談する →</a>
+      </div>
+      <div class="scard reveal">
+        <div class="ico">＋</div>
+        <h3>正社員・スポット紹介</h3>
+        <p>正社員採用も、単発の穴埋めも。お試し登用から社員化まで、一気通貫でサポートします。</p>
+        <a class="go" href="#contact">紹介を相談する →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps" id="flow">
+  <div class="wrap">
+    <span class="kicker">FLOW</span>
+    <h2 class="h2">ご利用の流れ</h2>
+    <div class="tl">
+      <div class="tli reveal"><div class="n">01</div><div><h3>フォームから無料相談を申し込む</h3><p>お困りごとにチェックして送信するだけ。1分で完了。</p></div></div>
+      <div class="tli reveal"><div class="n">02</div><div><h3>現状ヒアリング・課題診断</h3><p>欠員リスクや採用の困りごとを、現役薬剤師がお聞きします。</p></div></div>
+      <div class="tli reveal"><div class="n">03</div><div><h3>薬剤師をご紹介</h3><p>薬局の状況に合う薬剤師を人選してご提案。</p></div></div>
+      <div class="tli reveal"><div class="n">04</div><div><h3>業務委託でお試し稼働</h3><p>まず一緒に働いてもらい、相性と実力を確認。</p></div></div>
+      <div class="tli reveal"><div class="n">05</div><div><h3>双方合意で社員化</h3><p>「合う」と思えたら直接雇用へ。委託費は紹介料から控除します。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <span class="kicker">PRICING</span>
+    <h2 class="h2">料金の考え方</h2>
+    <p class="sub-c">具体的な金額は、薬局の状況に合わせて無料アセスメントでご案内します。</p>
+    <div class="price-box">
+      <div class="price-row"><span class="ic">＋</span><div><h3>使った月だけ</h3><p>業務委託のサービス料は、実際に薬剤師が稼働した月のみ。使わない月は0円です。</p></div></div>
+      <div class="price-row"><span class="ic">＋</span><div><h3>社員化しても、二重取りしない</h3><p>正社員採用が決まったら紹介料をいただきますが、これまでの委託費はそこから差し引きます。トータルで払いすぎになりません。</p></div></div>
+      <div class="price-row"><span class="ic">＋</span><div><h3>初期費用・登録料 0円</h3><p>完全成果報酬。相談だけ、診断だけでも費用はかかりません。</p></div></div>
+      <p class="price-note">※ 無理に採用をおすすめすることはありません。合わなければ、委託の費用だけで終われます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="pains" id="who">
+  <div class="wrap">
+    <span class="kicker">FOR SUCH PHARMACIES</span>
+    <h2 class="h2">こんな薬局に選ばれています</h2>
+    <div class="who-grid">
+      <div class="who reveal"><span class="q">“</span><p>管理薬剤師が一人だけ。何年も、まともに休めていない薬局。</p></div>
+      <div class="who reveal"><span class="q">“</span><p>求人を出しても応募が来ない。地域で採用に苦戦している薬局。</p></div>
+      <div class="who reveal"><span class="q">“</span><p>採用の失敗を繰り返してきた、店舗を増やしたい調剤チェーン。</p></div>
+    </div>
+    <p class="area">対応エリア：<b>●●（例：埼玉・東京を中心に）</b>　｜　オンラインでのご相談も可能です</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <span class="kicker">FAQ</span>
+    <h2 class="h2">よくある質問</h2>
+    <div class="faq">
+      <details><summary>契約は、誰と結ぶのですか？</summary><div class="a">薬剤師の就業に関する契約は、薬局と薬剤師が直接締結します。当社はその間をつなぐ「あっせん」を行う立場で、薬剤師を当社の指揮命令下で派遣するものではありません。</div></details>
+      <details><summary>偽装請負など、違法にならないですか？</summary><div class="a">当社は有料職業紹介事業の許可（許可番号：●）を保有し、適法な形でサービスを設計しています。薬剤師は薬局と直接契約し、労務管理・指揮命令は薬局側が行う建付けです。詳細はアセスメント時にご説明します。</div></details>
+      <details><summary>最低利用期間や、しばりはありますか？</summary><div class="a">業務委託のサービス料は使った月だけ。長期契約のしばりはありません。合わなければ、いつでも終えられます。</div></details>
+      <details><summary>お試しの後、社員にしなくても大丈夫ですか？</summary><div class="a">もちろんです。無理に採用をおすすめすることはありません。その場合は業務委託の費用のみで、余計な負担はかかりません。</div></details>
+      <details><summary>費用はどれくらいかかりますか？</summary><div class="a">初期費用・登録料は0円、完全成果報酬です。具体的な金額は薬局の状況によって変わるため、無料アセスメントでご案内します。</div></details>
+      <details><summary>対応エリアを教えてください。</summary><div class="a">●●を中心に対応しています。エリア外でもオンライン相談は可能ですので、まずはお問い合わせください。</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust" id="company">
+  <div class="wrap">
+    <span class="kicker">WHO WE ARE</span>
+    <h2 class="h2">運営は、現役の薬剤師です。</h2>
+    <div class="tcard">
+      <div class="avatar">＋</div>
+      <h3>● ●（薬剤師・管理薬剤師）</h3>
+      <p>薬剤師として現場に立ちながら、薬剤師専門の人材紹介を行っています。「現場が本当に必要としている採用」を、薬剤師の目線で。だから、薬局にも薬剤師にも、無理のないマッチングができます。</p>
+      <div class="lic">株式会社CiEL　｜　有料職業紹介事業許可番号：●　｜　薬剤師免許保有</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="contact">
+  <div class="narrow">
+    <h2>まず、無料相談から。</h2>
+    <p>お困りごとにチェックを入れて送信するだけ。現役薬剤師が、あなたの薬局に合った進め方をご提案します。</p>
+    <div class="gift">🎁 ご相談の方に「薬剤師採用 失敗しない進め方チェックリスト」を進呈</div>
+
+    <form class="cform" action="●FORM_ENDPOINT" method="POST">
+      <fieldset class="chk">
+        <legend>お困りごと（あてはまるものすべてに✓）</legend>
+        <label><input type="checkbox" name="worry" value="急な欠員・退職でシフトが埋まらない">急な欠員・退職でシフトが埋まらない</label>
+        <label><input type="checkbox" name="worry" value="採用してもすぐ辞める（ミスマッチ）">採用してもすぐ辞める（ミスマッチ）</label>
+        <label><input type="checkbox" name="worry" value="求人を出しても応募が来ない">求人を出しても応募が来ない</label>
+        <label><input type="checkbox" name="worry" value="管理薬剤師が不在・休めない">管理薬剤師が不在・休めない</label>
+        <label><input type="checkbox" name="worry" value="紹介料の負担が大きい">紹介料の負担が大きい</label>
+        <label><input type="checkbox" name="worry" value="まず相談・情報収集したい">まだ具体的でないが、まず相談・情報収集したい</label>
+      </fieldset>
+
+      <div class="frow"><label>薬局名<span>必須</span><input type="text" name="pharmacy" required></label></div>
+      <div class="frow2">
+        <label>ご担当者名<span>必須</span><input type="text" name="name" required></label>
+        <label>メールアドレス<span>必須</span><input type="email" name="email" required></label>
+      </div>
+      <div class="frow2">
+        <label>電話番号<span class="opt">任意</span><input type="tel" name="tel"></label>
+        <label>エリア<span class="opt">任意</span><input type="text" name="area" placeholder="例：さいたま市"></label>
+      </div>
+      <div class="frow"><label>ご相談内容<span class="opt">任意</span><textarea name="message" rows="4" placeholder="状況や希望など、ご自由にお書きください"></textarea></label></div>
+
+      <label class="consent"><input type="checkbox" required><span><a href="/privacy/" target="_blank">個人情報の取扱い</a>に同意します</span></label>
+      <button type="submit" class="fbtn">＋ 無料相談を申し込む</button>
+      <small>しつこい営業はしません／相談だけでもOK／通常1〜2営業日でご返信します</small>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbar">
+      <div>
+        <div class="logo" style="color:#fff;margin-bottom:10px"><span class="mark">＋</span>薬剤師バンク</div>
+        <div>現役薬剤師が運営する、薬局向け採用サービス</div>
+      </div>
+      <div>
+        <div style="margin-bottom:10px">
+          <a href="/pharmacist/">薬剤師の方はこちら</a>
+          <a href="/magazine/">マガジン</a>
+          <a href="/company/">運営会社</a>
+        </div>
+        <div>
+          <a href="/privacy/">プライバシーポリシー</a>
+          <a href="/terms/">利用規約</a>
+          <a href="/tokushoho/">特商法表記</a>
+        </div>
+      </div>
+    </div>
+    <div class="flic">株式会社CiEL　｜　有料職業紹介事業許可番号：●　｜　© 薬剤師バンク</div>
+  </div>
+</footer>
+
+<div class="mcta"><a href="#contact">＋ 無料相談・お問い合わせ</a></div>
+
+<script>
+  // scroll reveal
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    const io = new IntersectionObserver((es)=>{
+      es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  }
+  // クリックで動画読み込み（軽量ロード）。data-yt に実IDを入れると再生される
+  document.querySelectorAll('.video-facade').forEach(function(f){
+    var load=function(){
+      var id=f.getAttribute('data-yt');
+      if(!id||id.indexOf('●')===0){return;}
+      f.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" title="サービス説明動画" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>';
+    };
+    f.addEventListener('click',load);
+    f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();load();}});
+  });
+</script>
+</body>
+</html>
