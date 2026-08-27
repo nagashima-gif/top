@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>会社概要｜薬剤師バンク</title>
-<meta name="description" content="薬剤師バンクを運営する株式会社CiELの会社概要。">
+<title>取扱職種の範囲等の明示｜薬剤師バンク</title>
+<meta name="description" content="職業安定法に基づく、薬剤師バンク（株式会社CiEL）の取扱職種の範囲等の明示。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -12,13 +12,13 @@
   :root{
     --ink:#152A20;--green:#1C6B49;--green-deep:#124d34;--leaf:#2FA26A;
     --tint:#E9F3EC;--tint2:#F3F8F4;--paper:#FBFCFA;--muted:#5C6C63;
-    --border:#D9E4DC;
+    --amber:#D98A2B;--border:#D9E4DC;
     --disp:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
     --body:"Noto Sans JP",-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:840px;margin:0 auto;padding:0 20px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 20px}
   h1,h2,h3{font-family:var(--disp);line-height:1.4;letter-spacing:.01em}
   a{color:inherit}
 
@@ -31,15 +31,21 @@
   .crumb a{color:var(--green);text-decoration:none}
   .crumb a:hover{text-decoration:underline}
 
-  h1.page-title{font-size:clamp(26px,4vw,36px);font-weight:900;margin:14px 0 30px}
+  h1.page-title{font-size:clamp(26px,4vw,36px);font-weight:900;margin:14px 0 10px}
+  .lead{color:var(--muted);margin-bottom:20px}
+  .draft-note{background:#FFF6E5;border:1px dashed var(--amber);color:#7a5410;font-size:12.5px;padding:10px 16px;text-align:center;margin-bottom:30px;border-radius:8px}
 
-  .info-table{border-top:1px solid var(--border)}
-  .row{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--border)}
+  .info-table{border-top:1px solid var(--border);margin-bottom:36px}
+  .row{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--border)}
   .row .k{font-weight:700;color:var(--ink)}
-  .row .v{color:var(--ink)}
-  .row .v div{margin-bottom:2px}
+  .row .v{color:#39473f}
+  .row .v div{margin-bottom:4px}
   .row .v div:last-child{margin-bottom:0}
-  @media(max-width:560px){.row{grid-template-columns:1fr;gap:6px;padding:18px 0}.row .k{color:var(--green);font-size:13.5px}}
+  @media(max-width:560px){.row{grid-template-columns:1fr;gap:6px;padding:16px 0}.row .k{color:var(--green);font-size:13.5px}}
+
+  .doc h2{font-size:17px;margin:30px 0 10px}
+  .doc p{margin-bottom:12px;color:#39473f}
+  .doc .updated{margin-top:30px;font-size:12.5px;color:var(--muted)}
 
   footer{background:var(--ink);color:#9fb4a8;padding:40px 0 50px;font-size:13px;border-top:1px solid rgba(255,255,255,.08);margin-top:50px}
   footer .wrap{max-width:1040px}
@@ -93,7 +99,7 @@
   <nav class="menu-list">
     <a href="../index.html">TOP</a>
     <a href="../pharmacy/index.html">薬局の方へ</a>
-    <a href="index.html">運営会社</a>
+    <a href="../company/index.html">運営会社</a>
   </nav>
   <button type="button" class="cta-seeker" data-open="modal-seeker"><span class="ico">💬</span>転職エージェントに<br>無料相談</button>
   <button type="button" class="cta-employer" data-open="modal-employer"><span class="ico">🏥</span>薬剤師の採用を<br>検討している企業様</button>
@@ -106,15 +112,30 @@
 </header>
 
 <div class="wrap">
-  <p class="crumb"><a href="../index.html">TOP</a> / 会社概要</p>
-  <h1 class="page-title">会社概要</h1>
+  <p class="crumb"><a href="../index.html">TOP</a> / 取扱職種の範囲等の明示</p>
+  <h1 class="page-title">取扱職種の範囲等の明示</h1>
+  <p class="lead">職業安定法第32条の16に基づき、有料職業紹介事業者として以下のとおり明示します。</p>
+  <div class="draft-note">これはドラフトです。手数料に関する事項など●部分は、実際の運用に合わせてご確認・ご記入ください。</div>
 
   <div class="info-table">
-    <div class="row"><div class="k">法人名</div><div class="v">株式会社CiEL</div></div>
-    <div class="row"><div class="k">事業内容</div><div class="v"><div>有料職業紹介業</div><div>フリーランスのマッチングおよびプラットフォームの運営</div></div></div>
-    <div class="row"><div class="k">有料職業紹介<br>事業許可番号</div><div class="v">08-ユ-300444</div></div>
-    <div class="row"><div class="k">所在地</div><div class="v">〒309-1611<br>茨城県笠間市吉岡259-28</div></div>
-    <div class="row"><div class="k">電話番号</div><div class="v">ご請求があった場合は電話番号を遅滞なくご提供いたします。</div></div>
+    <div class="row"><div class="k">事業者名</div><div class="v">株式会社CiEL</div></div>
+    <div class="row"><div class="k">有料職業紹介事業<br>許可番号</div><div class="v">08-ユ-300444</div></div>
+    <div class="row"><div class="k">取扱職種の範囲</div><div class="v"><div>薬剤師、管理薬剤師その他薬局・調剤薬局業務に関連する職種</div></div></div>
+    <div class="row"><div class="k">取扱地域</div><div class="v">全国（オンライン相談を含む）</div></div>
+  </div>
+
+  <div class="doc">
+    <h2>手数料に関する事項</h2>
+    <p>求職者（薬剤師）の方からは、手数料は一切いただきません。求人者（薬局・企業）の方からは、ご成約時に成功報酬として手数料をいただきます。手数料の料率・計算方法は●●のとおりです（詳細は個別にご案内いたします）。</p>
+
+    <h2>苦情の処理に関する事項</h2>
+    <p>ご紹介したサービス・対応に関するご意見・苦情は、下記お問い合わせ窓口にて承ります。内容を確認のうえ、誠実かつ迅速に対応いたします。</p>
+    <p>株式会社CiEL　苦情処理担当者：●　●<br>電話番号：ご請求があった場合は電話番号を遅滞なくご提供いたします。</p>
+
+    <h2>個人情報の取扱いに関する事項</h2>
+    <p>個人情報の取扱いについては、当社の<a href="../privacy/index.html" style="color:var(--green);text-decoration:underline">個人情報保護指針</a>をご確認ください。</p>
+
+    <p class="updated">明示日：●●●●年●月●日</p>
   </div>
 </div>
 
@@ -123,13 +144,13 @@
     <div style="margin-bottom:10px">
       <a href="#" target="_blank" rel="noopener">YouTubeチャンネル</a>
       <a href="#" target="_blank" rel="noopener">転職対策メディア</a>
-      <a href="index.html">運営会社</a>
+      <a href="../company/index.html">運営会社</a>
       <a href="../greeting/index.html">代表者挨拶</a>
     </div>
     <div style="margin-bottom:10px">
       <a href="../resources/index.html">転職お役立ち資料</a>
       <a href="../privacy/index.html">個人情報保護指針</a>
-      <a href="../scope/index.html">取扱職種の範囲等の明示</a>
+      <a href="index.html">取扱職種の範囲等の明示</a>
     </div>
     <div>株式会社CiEL　｜　有料職業紹介事業許可番号：08-ユ-300444　｜　© 薬剤師バンク</div>
   </div>

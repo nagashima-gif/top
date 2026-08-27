@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>会社概要｜薬剤師バンク</title>
-<meta name="description" content="薬剤師バンクを運営する株式会社CiELの会社概要。">
+<title>個人情報保護指針｜薬剤師バンク</title>
+<meta name="description" content="薬剤師バンクを運営する株式会社CiELの個人情報保護指針。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -12,13 +12,13 @@
   :root{
     --ink:#152A20;--green:#1C6B49;--green-deep:#124d34;--leaf:#2FA26A;
     --tint:#E9F3EC;--tint2:#F3F8F4;--paper:#FBFCFA;--muted:#5C6C63;
-    --border:#D9E4DC;
+    --amber:#D98A2B;--border:#D9E4DC;
     --disp:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
     --body:"Noto Sans JP",-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:840px;margin:0 auto;padding:0 20px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 20px}
   h1,h2,h3{font-family:var(--disp);line-height:1.4;letter-spacing:.01em}
   a{color:inherit}
 
@@ -31,15 +31,15 @@
   .crumb a{color:var(--green);text-decoration:none}
   .crumb a:hover{text-decoration:underline}
 
-  h1.page-title{font-size:clamp(26px,4vw,36px);font-weight:900;margin:14px 0 30px}
+  h1.page-title{font-size:clamp(26px,4vw,36px);font-weight:900;margin:14px 0 10px}
+  .lead{color:var(--muted);margin-bottom:20px}
+  .draft-note{background:#FFF6E5;border:1px dashed var(--amber);color:#7a5410;font-size:12.5px;padding:10px 16px;text-align:center;margin-bottom:30px;border-radius:8px}
 
-  .info-table{border-top:1px solid var(--border)}
-  .row{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--border)}
-  .row .k{font-weight:700;color:var(--ink)}
-  .row .v{color:var(--ink)}
-  .row .v div{margin-bottom:2px}
-  .row .v div:last-child{margin-bottom:0}
-  @media(max-width:560px){.row{grid-template-columns:1fr;gap:6px;padding:18px 0}.row .k{color:var(--green);font-size:13.5px}}
+  .doc h2{font-size:17px;margin:34px 0 10px}
+  .doc p{margin-bottom:12px;color:#39473f}
+  .doc ol,.doc ul{margin:0 0 12px 1.4em;color:#39473f}
+  .doc li{margin-bottom:6px}
+  .doc .updated{margin-top:40px;font-size:12.5px;color:var(--muted)}
 
   footer{background:var(--ink);color:#9fb4a8;padding:40px 0 50px;font-size:13px;border-top:1px solid rgba(255,255,255,.08);margin-top:50px}
   footer .wrap{max-width:1040px}
@@ -93,7 +93,7 @@
   <nav class="menu-list">
     <a href="../index.html">TOP</a>
     <a href="../pharmacy/index.html">薬局の方へ</a>
-    <a href="index.html">運営会社</a>
+    <a href="../company/index.html">運営会社</a>
   </nav>
   <button type="button" class="cta-seeker" data-open="modal-seeker"><span class="ico">💬</span>転職エージェントに<br>無料相談</button>
   <button type="button" class="cta-employer" data-open="modal-employer"><span class="ico">🏥</span>薬剤師の採用を<br>検討している企業様</button>
@@ -106,15 +106,43 @@
 </header>
 
 <div class="wrap">
-  <p class="crumb"><a href="../index.html">TOP</a> / 会社概要</p>
-  <h1 class="page-title">会社概要</h1>
+  <p class="crumb"><a href="../index.html">TOP</a> / 個人情報保護指針</p>
+  <h1 class="page-title">個人情報保護指針</h1>
+  <p class="lead">株式会社CiEL（以下「当社」）は、薬剤師バンクの運営にあたり、お預かりする個人情報を以下の方針に基づき適切に取り扱います。</p>
+  <div class="draft-note">これは個人情報保護指針のドラフト（一般的なひな形）です。事業内容に合わせて内容の確認・調整をお願いします。</div>
 
-  <div class="info-table">
-    <div class="row"><div class="k">法人名</div><div class="v">株式会社CiEL</div></div>
-    <div class="row"><div class="k">事業内容</div><div class="v"><div>有料職業紹介業</div><div>フリーランスのマッチングおよびプラットフォームの運営</div></div></div>
-    <div class="row"><div class="k">有料職業紹介<br>事業許可番号</div><div class="v">08-ユ-300444</div></div>
-    <div class="row"><div class="k">所在地</div><div class="v">〒309-1611<br>茨城県笠間市吉岡259-28</div></div>
-    <div class="row"><div class="k">電話番号</div><div class="v">ご請求があった場合は電話番号を遅滞なくご提供いたします。</div></div>
+  <div class="doc">
+    <h2>1. 個人情報の取得</h2>
+    <p>当社は、適法かつ公正な手段によって個人情報を取得します。取得にあたっては、利用目的を明示し、必要な範囲でのみお預かりします。</p>
+
+    <h2>2. 利用目的</h2>
+    <p>当社は、取得した個人情報を以下の目的の範囲内で利用します。</p>
+    <ul>
+      <li>職業紹介サービス（求人・求職者双方へのご案内、マッチング）の提供</li>
+      <li>お問い合わせ・ご相談への対応</li>
+      <li>サービスに関するご案内、アンケートの実施</li>
+      <li>雇用契約・業務委託契約の締結およびその履行</li>
+      <li>その他、上記に付随する業務の遂行</li>
+    </ul>
+
+    <h2>3. 第三者提供</h2>
+    <p>当社は、以下の場合を除き、あらかじめご本人の同意を得ることなく、第三者に個人情報を提供することはありません。</p>
+    <ul>
+      <li>職業紹介サービスの目的達成に必要な範囲で、求人企業・求職者へ情報を提供する場合</li>
+      <li>法令に基づく場合</li>
+      <li>人の生命、身体または財産の保護のために必要がある場合であって、ご本人の同意を得ることが困難である場合</li>
+    </ul>
+
+    <h2>4. 個人情報の管理</h2>
+    <p>当社は、個人情報の漏えい、滅失またはき損の防止その他の安全管理のために必要かつ適切な措置を講じます。</p>
+
+    <h2>5. 開示・訂正・削除等のご請求</h2>
+    <p>ご本人からの個人情報の開示・訂正・利用停止・削除等のご請求については、ご本人であることを確認の上、法令に従い遅滞なく対応します。ご請求は下記お問い合わせ窓口までご連絡ください。</p>
+
+    <h2>6. お問い合わせ窓口</h2>
+    <p>株式会社CiEL　個人情報保護管理者<br>〒309-1611　茨城県笠間市吉岡259-28<br>電話番号：ご請求があった場合は電話番号を遅滞なくご提供いたします。</p>
+
+    <p class="updated">制定日：●●●●年●月●日</p>
   </div>
 </div>
 
@@ -123,12 +151,12 @@
     <div style="margin-bottom:10px">
       <a href="#" target="_blank" rel="noopener">YouTubeチャンネル</a>
       <a href="#" target="_blank" rel="noopener">転職対策メディア</a>
-      <a href="index.html">運営会社</a>
+      <a href="../company/index.html">運営会社</a>
       <a href="../greeting/index.html">代表者挨拶</a>
     </div>
     <div style="margin-bottom:10px">
       <a href="../resources/index.html">転職お役立ち資料</a>
-      <a href="../privacy/index.html">個人情報保護指針</a>
+      <a href="index.html">個人情報保護指針</a>
       <a href="../scope/index.html">取扱職種の範囲等の明示</a>
     </div>
     <div>株式会社CiEL　｜　有料職業紹介事業許可番号：08-ユ-300444　｜　© 薬剤師バンク</div>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>会社概要｜薬剤師バンク</title>
-<meta name="description" content="薬剤師バンクを運営する株式会社CiELの会社概要。">
+<title>代表者挨拶｜薬剤師バンク</title>
+<meta name="description" content="薬剤師バンクを運営する株式会社CiEL代表よりご挨拶。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:840px;margin:0 auto;padding:0 20px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
   h1,h2,h3{font-family:var(--disp);line-height:1.4;letter-spacing:.01em}
   a{color:inherit}
 
@@ -31,15 +31,17 @@
   .crumb a{color:var(--green);text-decoration:none}
   .crumb a:hover{text-decoration:underline}
 
-  h1.page-title{font-size:clamp(26px,4vw,36px);font-weight:900;margin:14px 0 30px}
+  h1.page-title{font-size:clamp(26px,4vw,36px);font-weight:900;margin:14px 0 34px}
 
-  .info-table{border-top:1px solid var(--border)}
-  .row{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--border)}
-  .row .k{font-weight:700;color:var(--ink)}
-  .row .v{color:var(--ink)}
-  .row .v div{margin-bottom:2px}
-  .row .v div:last-child{margin-bottom:0}
-  @media(max-width:560px){.row{grid-template-columns:1fr;gap:6px;padding:18px 0}.row .k{color:var(--green);font-size:13.5px}}
+  .greet-card{display:flex;gap:26px;align-items:flex-start;margin-bottom:30px}
+  .greet-card .avatar{flex:none;width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--leaf),var(--green));display:grid;place-items:center;font-family:var(--disp);font-weight:900;font-size:34px;color:#fff}
+  .greet-card .name{font-size:18px;font-weight:900}
+  .greet-card .role{font-size:13px;color:var(--muted);margin-top:2px}
+  @media(max-width:520px){.greet-card{flex-direction:column;align-items:center;text-align:center}}
+
+  .greet-body p{margin-bottom:20px}
+  .sign{margin-top:36px;text-align:right;font-family:var(--disp);font-weight:700}
+  .sign small{display:block;font-weight:500;color:var(--muted);font-size:12.5px;margin-top:4px}
 
   footer{background:var(--ink);color:#9fb4a8;padding:40px 0 50px;font-size:13px;border-top:1px solid rgba(255,255,255,.08);margin-top:50px}
   footer .wrap{max-width:1040px}
@@ -93,7 +95,7 @@
   <nav class="menu-list">
     <a href="../index.html">TOP</a>
     <a href="../pharmacy/index.html">薬局の方へ</a>
-    <a href="index.html">運営会社</a>
+    <a href="../company/index.html">運営会社</a>
   </nav>
   <button type="button" class="cta-seeker" data-open="modal-seeker"><span class="ico">💬</span>転職エージェントに<br>無料相談</button>
   <button type="button" class="cta-employer" data-open="modal-employer"><span class="ico">🏥</span>薬剤師の採用を<br>検討している企業様</button>
@@ -106,15 +108,27 @@
 </header>
 
 <div class="wrap">
-  <p class="crumb"><a href="../index.html">TOP</a> / 会社概要</p>
-  <h1 class="page-title">会社概要</h1>
+  <p class="crumb"><a href="../index.html">TOP</a> / 代表者挨拶</p>
+  <h1 class="page-title">代表者挨拶</h1>
 
-  <div class="info-table">
-    <div class="row"><div class="k">法人名</div><div class="v">株式会社CiEL</div></div>
-    <div class="row"><div class="k">事業内容</div><div class="v"><div>有料職業紹介業</div><div>フリーランスのマッチングおよびプラットフォームの運営</div></div></div>
-    <div class="row"><div class="k">有料職業紹介<br>事業許可番号</div><div class="v">08-ユ-300444</div></div>
-    <div class="row"><div class="k">所在地</div><div class="v">〒309-1611<br>茨城県笠間市吉岡259-28</div></div>
-    <div class="row"><div class="k">電話番号</div><div class="v">ご請求があった場合は電話番号を遅滞なくご提供いたします。</div></div>
+  <div class="greet-card">
+    <div class="avatar">＋</div>
+    <div>
+      <div class="name">● ●</div>
+      <div class="role">株式会社CiEL 代表取締役／薬剤師・管理薬剤師</div>
+    </div>
+  </div>
+
+  <div class="greet-body">
+    <p>はじめまして。株式会社CiEL代表の●●です。薬剤師バンクをご覧いただき、ありがとうございます。</p>
+    <p>私自身、現役の薬剤師として現場に立ち続けながら、薬局の「人が足りない」という切実な悩みと、薬剤師の「もっと自分に合った働き方をしたい」という思いの両方を、日々肌で感じてきました。</p>
+    <p>採用は書類と数回の面接だけで決まってしまうことが多く、入ってみないと分からない「合う・合わない」が、双方にとって大きなリスクになっています。薬剤師バンクは、まず業務委託で一緒に働いてみてから、双方が納得した上で社員へ進む「お試し登用」という仕組みで、このミスマッチをなくすことを目指しています。</p>
+    <p>薬剤師の免許を持つ運営者だからこそ分かる視点で、薬局にも薬剤師にも、無理のない一歩を提供していきます。どうぞよろしくお願いいたします。</p>
+  </div>
+
+  <div class="sign">
+    株式会社CiEL 代表取締役　● ●
+    <small>薬剤師免許・管理薬剤師資格 保有</small>
   </div>
 </div>
 
@@ -123,8 +137,8 @@
     <div style="margin-bottom:10px">
       <a href="#" target="_blank" rel="noopener">YouTubeチャンネル</a>
       <a href="#" target="_blank" rel="noopener">転職対策メディア</a>
-      <a href="index.html">運営会社</a>
-      <a href="../greeting/index.html">代表者挨拶</a>
+      <a href="../company/index.html">運営会社</a>
+      <a href="index.html">代表者挨拶</a>
     </div>
     <div style="margin-bottom:10px">
       <a href="../resources/index.html">転職お役立ち資料</a>
