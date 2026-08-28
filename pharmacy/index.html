@@ -150,6 +150,32 @@
   .area b{color:var(--ink)}
   @media(max-width:760px){.who-grid{grid-template-columns:1fr;gap:12px}}
 
+  /* voice slider */
+  .voice-note{text-align:center;color:var(--muted);font-size:12.5px;margin-top:10px}
+  .voice-slider{position:relative;max-width:800px;margin:36px auto 0}
+  .voice-viewport{overflow:hidden;border-radius:18px}
+  .voice-track{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+  .voice-card{flex:0 0 100%;background:#fff;border:1px solid var(--border);border-radius:18px;padding:38px 36px;box-sizing:border-box;box-shadow:0 10px 34px rgba(20,42,32,.06)}
+  .voice-card .vq{font-family:var(--disp);color:var(--leaf);font-weight:900;font-size:34px;line-height:1;display:block}
+  .voice-card .vtext{font-size:15.5px;color:#293a30;margin:8px 0 26px;line-height:1.95;min-height:5.8em}
+  .voice-meta{display:flex;align-items:center;gap:14px}
+  .voice-meta .avatar{flex:none;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--leaf),var(--green));display:grid;place-items:center;color:#fff;font-family:var(--disp);font-weight:900;font-size:18px}
+  .voice-meta .who-name{font-size:15px;font-weight:700;color:var(--ink)}
+  .voice-meta .who-sub{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .voice-more{margin-top:20px;display:inline-block;font-weight:700;color:var(--green);font-size:13.5px;text-decoration:none}
+  .voice-more:hover{text-decoration:underline}
+  .voice-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+  .voice-dot{width:8px;height:8px;border-radius:50%;background:var(--border);border:0;padding:0;cursor:pointer}
+  .voice-dot[aria-current="true"]{background:var(--green)}
+  .voice-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--border);display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 14px rgba(20,42,32,.1);font-size:16px;color:var(--green)}
+  .voice-arrow.prev{left:-19px}
+  .voice-arrow.next{right:-19px}
+  @media(max-width:700px){
+    .voice-arrow{display:none}
+    .voice-card{padding:28px 22px}
+    .voice-card .vtext{min-height:0}
+  }
+
   /* faq */
   .faq{max-width:760px;margin:40px auto 0}
   details{background:#fff;border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden}
@@ -491,6 +517,61 @@
   </div>
 </section>
 
+<!-- VOICES -->
+<section id="voices">
+  <div class="wrap">
+    <span class="kicker">VOICE</span>
+    <h2 class="h2">ご利用者様の声</h2>
+    <p class="voice-note">※ ご利用いただいた際に想定される声のサンプルです。実際のお声は今後順次差し替えます。</p>
+
+    <div class="voice-slider" id="voiceSlider">
+      <button type="button" class="voice-arrow prev" aria-label="前の声">‹</button>
+      <div class="voice-viewport">
+        <div class="voice-track">
+          <div class="voice-card">
+            <span class="vq">"</span>
+            <p class="vtext">急な欠員が出たときにすぐ動いてもらえて、本当に助かりました。今は「また急に辞められたら」という不安がかなり減りました。お試しで来てくれた方も現場に馴染んでくれて、そのまま社員になってもらえたのも大きかったです。</p>
+            <div class="voice-meta">
+              <div class="avatar">＋</div>
+              <div>
+                <div class="who-name">しんば薬局 蓮沼店</div>
+                <div class="who-sub">GIファーマシー株式会社　｜　店舗数：4店舗　｜　エリア：東京都板橋区</div>
+              </div>
+            </div>
+            <a class="voice-more" href="../voices/1.html">詳細を見る →</a>
+          </div>
+          <div class="voice-card">
+            <span class="vq">"</span>
+            <p class="vtext">求人を出してもなかなか応募が来ず、ずっと採用に苦戦していました。お試し登用で実際に働いてもらってから決められるので、面接だけでは分からない相性まで確認できたのが安心でした。</p>
+            <div class="voice-meta">
+              <div class="avatar">＋</div>
+              <div>
+                <div class="who-name">ひまわり調剤薬局</div>
+                <div class="who-sub">株式会社ひまわりメディカル　｜　店舗数：1店舗　｜　エリア：埼玉県川口市</div>
+              </div>
+            </div>
+            <a class="voice-more" href="../voices/2.html">詳細を見る →</a>
+          </div>
+          <div class="voice-card">
+            <span class="vq">"</span>
+            <p class="vtext">店舗を増やすたびに採用のミスマッチで悩んでいましたが、まず業務委託で入ってもらう仕組みのおかげで、採り直しのコストがぐっと減りました。展開のスピードを落とさずに済んでいます。</p>
+            <div class="voice-meta">
+              <div class="avatar">＋</div>
+              <div>
+                <div class="who-name">グリーン調剤薬局（グループ12店舗）</div>
+                <div class="who-sub">株式会社グリーンファーマ　｜　店舗数：12店舗　｜　エリア：神奈川県内</div>
+              </div>
+            </div>
+            <a class="voice-more" href="../voices/3.html">詳細を見る →</a>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="voice-arrow next" aria-label="次の声">›</button>
+      <div class="voice-dots"></div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap">
@@ -705,6 +786,60 @@
     document.addEventListener('keydown', function(e){
       if(e.key==='Escape'){ overlays.forEach(function(o){ if(o.classList.contains('open')) closeModal(o); }); }
     });
+  })();
+</script>
+
+<script>
+  // voice slider
+  (function(){
+    var root = document.getElementById('voiceSlider');
+    if(!root) return;
+    var track = root.querySelector('.voice-track');
+    var cards = Array.prototype.slice.call(root.querySelectorAll('.voice-card'));
+    var dotsWrap = root.querySelector('.voice-dots');
+    var prevBtn = root.querySelector('.voice-arrow.prev');
+    var nextBtn = root.querySelector('.voice-arrow.next');
+    var index = 0;
+    var timer = null;
+    var autoplay = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+
+    cards.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'voice-dot';
+      dot.setAttribute('aria-label', (i+1) + '件目の声を表示');
+      dot.addEventListener('click', function(){ goTo(i); restart(); });
+      dotsWrap.appendChild(dot);
+    });
+    var dots = Array.prototype.slice.call(dotsWrap.querySelectorAll('.voice-dot'));
+
+    function render(){
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function(d,i){ d.setAttribute('aria-current', i===index ? 'true' : 'false'); });
+    }
+    function goTo(i){
+      index = (i + cards.length) % cards.length;
+      render();
+    }
+    function next(){ goTo(index+1); }
+    function prev(){ goTo(index-1); }
+    function start(){
+      if(!autoplay) return;
+      stop();
+      timer = setInterval(next, 5500);
+    }
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+    function restart(){ stop(); start(); }
+
+    nextBtn.addEventListener('click', function(){ next(); restart(); });
+    prevBtn.addEventListener('click', function(){ prev(); restart(); });
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    root.addEventListener('focusin', stop);
+    root.addEventListener('focusout', start);
+
+    render();
+    start();
   })();
 </script>
 

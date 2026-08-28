@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>グリーン調剤薬局様の声｜薬剤師バンク</title>
+<meta name="description" content="株式会社グリーンファーマ グリーン調剤薬局様に、薬剤師バンクをご利用いただいた感想をお伺いしました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#152A20;--green:#1C6B49;--green-deep:#124d34;--leaf:#2FA26A;
+    --tint:#E9F3EC;--tint2:#F3F8F4;--paper:#FBFCFA;--muted:#5C6C63;
+    --amber:#D98A2B;--border:#D9E4DC;
+    --disp:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+    --body:"Noto Sans JP",-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{font-family:var(--disp);line-height:1.4;letter-spacing:.01em}
+  a{color:inherit}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(251,252,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+  .hbar{display:flex;align-items:center;justify-content:space-between;height:62px;max-width:1040px;margin:0 auto;padding:0 20px}
+  .logo{font-family:var(--disp);font-weight:900;font-size:20px;color:var(--green);display:flex;align-items:center;gap:6px;text-decoration:none}
+  .logo .mark{display:inline-grid;place-items:center;width:26px;height:26px;background:var(--green);color:#fff;border-radius:7px;font-size:17px}
+
+  .crumb{padding:26px 0 0;font-size:13px;color:var(--muted)}
+  .crumb a{color:var(--green);text-decoration:none}
+  .crumb a:hover{text-decoration:underline}
+
+  .draft-note{background:#FFF6E5;border:1px dashed var(--amber);color:#7a5410;font-size:12.5px;padding:10px 16px;text-align:center;margin:18px 0;border-radius:8px}
+
+  .vhead{margin:14px 0 24px}
+  .vhead .kicker{display:block;font-family:var(--disp);font-weight:700;color:var(--leaf);font-size:13px;letter-spacing:.1em;margin-bottom:8px}
+  h1.page-title{font-size:clamp(24px,3.6vw,32px);font-weight:900}
+
+  .info-table{border-top:1px solid var(--border);margin:26px 0 36px}
+  .row{display:grid;grid-template-columns:160px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:14.5px}
+  .row .k{font-weight:700;color:var(--green)}
+  @media(max-width:520px){.row{grid-template-columns:1fr;gap:4px}}
+
+  .quote-block{background:var(--tint2);border-radius:16px;padding:30px 28px;margin-bottom:34px;position:relative}
+  .quote-block .vq{font-family:var(--disp);color:var(--leaf);font-weight:900;font-size:32px;line-height:1}
+  .quote-block p{font-size:15.5px;color:#293a30;margin-top:8px}
+
+  .doc h2{font-size:17px;margin:30px 0 10px}
+  .doc p{margin-bottom:14px;color:#39473f}
+
+  .back-link{display:inline-block;margin-top:10px;font-weight:700;color:var(--green);text-decoration:none;font-size:14px}
+  .back-link:hover{text-decoration:underline}
+
+  footer{background:var(--ink);color:#9fb4a8;padding:40px 0 50px;font-size:13px;border-top:1px solid rgba(255,255,255,.08);margin-top:50px}
+  footer .wrap{max-width:1040px}
+  footer a{color:#cfe0d6;text-decoration:none;margin-right:18px}
+  footer a:hover{color:#fff}
+
+  /* side CTA rail */
+  .side-cta{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:80;display:flex;flex-direction:column;box-shadow:-4px 0 20px rgba(20,42,32,.12);border-radius:12px 0 0 12px;overflow:hidden}
+  .side-cta .menu-list{background:#fff;width:150px;padding:6px 16px}
+  .side-cta .menu-list a{display:block;padding:10px 0;font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--border)}
+  .side-cta .menu-list a:last-child{border-bottom:none}
+  .side-cta .menu-list a:hover{color:var(--green)}
+  .side-cta button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:150px;padding:18px 10px;border:0;cursor:pointer;font-family:var(--disp);font-weight:700;font-size:13.5px;line-height:1.4;text-align:center}
+  .side-cta .cta-seeker{background:var(--leaf);color:#fff}
+  .side-cta .cta-seeker:hover{background:var(--green)}
+  .side-cta .cta-employer{background:var(--ink);color:#fff}
+  .side-cta .cta-employer:hover{background:#0c1b13}
+  .side-cta .ico{font-size:20px}
+  @media(max-width:760px){
+    .side-cta{position:fixed;right:0;left:0;top:auto;bottom:0;transform:none;flex-direction:row;border-radius:0;box-shadow:0 -4px 20px rgba(20,42,32,.12)}
+    .side-cta .menu-list{display:none}
+    .side-cta button{flex:1;flex-direction:row;width:auto;padding:14px 8px;font-size:12.5px}
+    body{padding-bottom:64px}
+  }
+
+  /* modal */
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(21,42,32,.55);z-index:100;padding:24px;overflow-y:auto}
+  .modal-overlay.open{display:flex;align-items:flex-start;justify-content:center}
+  .modal{background:#fff;border-radius:16px;max-width:520px;width:100%;margin:20px 0;padding:32px 28px 28px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+  .modal-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border:1px solid var(--border);background:#fff;border-radius:8px;font-size:16px;color:var(--muted);cursor:pointer;display:grid;place-items:center}
+  .modal-close:hover{background:var(--tint2)}
+  .modal h3{font-size:20px;font-weight:900;color:var(--ink);margin-bottom:8px}
+  .modal .modal-sub{font-size:13.5px;color:var(--muted);margin-bottom:22px}
+  .modal label{display:block;font-size:13px;font-weight:700;color:var(--ink);margin:14px 0 6px}
+  .modal label .req{color:#d64545;margin-left:2px}
+  .modal input,.modal select,.modal textarea{width:100%;padding:11px 12px;border:1px solid var(--border);border-radius:8px;font-family:var(--body);font-size:14px;color:var(--ink);background:var(--tint2)}
+  .modal textarea{resize:vertical;min-height:80px}
+  .modal input:focus,.modal select:focus,.modal textarea:focus{outline:2px solid var(--leaf);outline-offset:1px;background:#fff}
+  .modal .submit-btn{margin-top:22px;width:100%;padding:14px;border:0;border-radius:999px;background:var(--green);color:#fff;font-family:var(--disp);font-weight:700;font-size:15px;cursor:pointer}
+  .modal .submit-btn:hover{background:var(--green-deep)}
+  .modal .thanks{display:none;text-align:center;padding:20px 0}
+  .modal .thanks.show{display:block}
+  .modal .thanks .ic{font-size:36px;color:var(--leaf);font-family:var(--disp);font-weight:900}
+  .modal .thanks p{margin-top:10px;color:var(--muted);font-size:14px}
+  .modal form.hide{display:none}
+</style>
+</head>
+<body>
+
+<div class="side-cta">
+  <nav class="menu-list">
+    <a href="#" target="_blank" rel="noopener">YouTubeチャンネル</a>
+    <a href="#" target="_blank" rel="noopener">転職対策メディア</a>
+    <a href="../company/index.html">運営会社</a>
+    <a href="../greeting/index.html">代表者挨拶</a>
+    <a href="../resources/index.html">転職お役立ち資料</a>
+    <a href="../privacy/index.html">個人情報保護指針</a>
+    <a href="../scope/index.html">取扱職種の範囲等の明示</a>
+  </nav>
+  <button type="button" class="cta-seeker" data-open="modal-seeker"><span class="ico">💬</span>転職エージェントに<br>無料相談</button>
+  <button type="button" class="cta-employer" data-open="modal-employer"><span class="ico">🏥</span>薬剤師の採用を<br>検討している企業様</button>
+</div>
+
+<header>
+  <div class="hbar">
+    <a href="../index.html" class="logo"><span class="mark">＋</span>薬剤師バンク</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../index.html">TOP</a> / <a href="../pharmacy/index.html">薬局の方へ</a> / ご利用者様の声</p>
+  <div class="draft-note">これは想定される声のサンプル（ドラフト）です。実際のお声は今後差し替えます。</div>
+
+  <div class="vhead">
+    <span class="kicker">VOICE 03</span>
+    <h1 class="page-title">「展開のスピードを落とさずに済んでいます」</h1>
+  </div>
+
+  <div class="info-table">
+    <div class="row"><div class="k">薬局名</div><div>グリーン調剤薬局（グループ12店舗）</div></div>
+    <div class="row"><div class="k">運営会社</div><div>株式会社グリーンファーマ</div></div>
+    <div class="row"><div class="k">店舗数</div><div>12店舗</div></div>
+    <div class="row"><div class="k">エリア</div><div>神奈川県内</div></div>
+    <div class="row"><div class="k">ご利用サービス</div><div>お試し登用（業務委託）を活用した新規出店採用</div></div>
+  </div>
+
+  <div class="quote-block">
+    <span class="vq">"</span>
+    <p>店舗を増やすたびに採用のミスマッチで悩んでいましたが、まず業務委託で入ってもらう仕組みのおかげで、採り直しのコストがぐっと減りました。展開のスピードを落とさずに済んでいます。</p>
+  </div>
+
+  <div class="doc">
+    <h2>導入前のお悩み</h2>
+    <p>店舗展開のペースに採用が追いつかず、急いで採用した結果、早期離職を繰り返すことがありました。採り直しのたびに時間もコストもかかり、出店計画に影響することもありました。</p>
+
+    <h2>導入の決め手</h2>
+    <p>複数店舗でも一貫して使える「お試し登用」の仕組みに魅力を感じました。現場に配属してから合意した上で社員化できるため、店舗ごとの采配にも柔軟に対応できると考えました。</p>
+
+    <h2>導入後の変化</h2>
+    <p>新規出店時の採用でも、まず業務委託で現場に入ってもらい、相性を確認してから社員化する流れが定着しました。早期離職が減り、出店スケジュールを崩さずに人員を確保できるようになりました。</p>
+  </div>
+
+  <a class="back-link" href="../pharmacy/index.html">← 薬局の方へ に戻る</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div style="margin-bottom:10px">
+      <a href="#" target="_blank" rel="noopener">YouTubeチャンネル</a>
+      <a href="#" target="_blank" rel="noopener">転職対策メディア</a>
+      <a href="../company/index.html">運営会社</a>
+      <a href="../greeting/index.html">代表者挨拶</a>
+    </div>
+    <div style="margin-bottom:10px">
+      <a href="../resources/index.html">転職お役立ち資料</a>
+      <a href="../privacy/index.html">個人情報保護指針</a>
+      <a href="../scope/index.html">取扱職種の範囲等の明示</a>
+    </div>
+    <div>株式会社CiEL　｜　有料職業紹介事業許可番号：08-ユ-300444　｜　© 薬剤師バンク</div>
+  </div>
+</footer>
+
+<!-- MODAL: 求職者（薬剤師）向け 無料相談 -->
+<div class="modal-overlay" id="modal-seeker" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-seeker-title">
+    <button type="button" class="modal-close" data-close aria-label="閉じる">✕</button>
+    <h3 id="modal-seeker-title">転職エージェントに無料相談</h3>
+    <p class="modal-sub">現役薬剤師のエージェントが、あなたに合う働き方をご提案します。ご相談は無料です。</p>
+    <form data-thanks="thanks-seeker">
+      <label>お名前<span class="req">*</span></label>
+      <input type="text" name="name" required placeholder="例：山田 太郎">
+      <label>生年月日</label>
+      <input type="date" name="birthday">
+      <label>保有資格<span class="req">*</span></label>
+      <select name="license" required>
+        <option value="">選択してください</option>
+        <option>薬剤師免許</option>
+        <option>薬剤師免許＋管理薬剤師資格</option>
+      </select>
+      <label>現在の勤務先</label>
+      <input type="text" name="workplace" placeholder="例：●●薬局">
+      <label>現年収（万円）</label>
+      <input type="number" name="salary" placeholder="例：500">
+      <label>希望する働き方</label>
+      <select name="style">
+        <option value="">選択してください</option>
+        <option>正社員</option>
+        <option>スポット・パート</option>
+        <option>業務委託・フリーランス</option>
+        <option>まだ決めていない</option>
+      </select>
+      <label>転職希望時期</label>
+      <select name="timing">
+        <option value="">選択してください</option>
+        <option>今すぐ</option>
+        <option>3ヶ月以内</option>
+        <option>半年以内</option>
+        <option>情報収集中</option>
+      </select>
+      <label>メールアドレス<span class="req">*</span></label>
+      <input type="email" name="email" required placeholder="例：sample@example.com">
+      <label>電話番号</label>
+      <input type="tel" name="tel" placeholder="例：090-0000-0000">
+      <button type="submit" class="submit-btn">無料相談を申し込む</button>
+    </form>
+    <div class="thanks" id="thanks-seeker">
+      <div class="ic">＋</div>
+      <p>お問い合わせありがとうございます。<br>担当エージェントより追ってご連絡いたします。</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: 企業（薬局）向け 採用相談 -->
+<div class="modal-overlay" id="modal-employer" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-employer-title">
+    <button type="button" class="modal-close" data-close aria-label="閉じる">✕</button>
+    <h3 id="modal-employer-title">薬剤師の採用を検討している企業様</h3>
+    <p class="modal-sub">採用・急な欠員のお悩みも、現役薬剤師が運営するからこそ分かる視点でご提案します。</p>
+    <form data-thanks="thanks-employer">
+      <label>薬局・法人名<span class="req">*</span></label>
+      <input type="text" name="company" required placeholder="例：株式会社●●薬局">
+      <label>ご担当者名<span class="req">*</span></label>
+      <input type="text" name="contact-name" required placeholder="例：山田 太郎">
+      <label>対応エリア</label>
+      <input type="text" name="area" placeholder="例：東京都●●区">
+      <label>お困りごと</label>
+      <select name="issue">
+        <option value="">選択してください</option>
+        <option>急な欠員が出た</option>
+        <option>採用してもすぐ辞めてしまう</option>
+        <option>新規出店・増員での採用</option>
+        <option>その他</option>
+      </select>
+      <label>詳細・ご要望</label>
+      <textarea name="detail" placeholder="現在の状況やご希望の条件などをご記入ください"></textarea>
+      <label>メールアドレス<span class="req">*</span></label>
+      <input type="email" name="email" required placeholder="例：sample@example.com">
+      <label>電話番号</label>
+      <input type="tel" name="tel" placeholder="例：03-0000-0000">
+      <button type="submit" class="submit-btn">採用のご相談をする</button>
+    </form>
+    <div class="thanks" id="thanks-employer">
+      <div class="ic">＋</div>
+      <p>お問い合わせありがとうございます。<br>担当者より追ってご連絡いたします。</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var overlays = document.querySelectorAll('.modal-overlay');
+    document.querySelectorAll('[data-open]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var target = document.getElementById(btn.getAttribute('data-open'));
+        if(!target) return;
+        target.classList.add('open');
+        target.setAttribute('aria-hidden','false');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function closeModal(overlay){
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden','true');
+      document.body.style.overflow='';
+    }
+    overlays.forEach(function(overlay){
+      overlay.addEventListener('click', function(e){ if(e.target===overlay) closeModal(overlay); });
+      overlay.querySelectorAll('[data-close]').forEach(function(btn){
+        btn.addEventListener('click', function(){ closeModal(overlay); });
+      });
+      var form = overlay.querySelector('form');
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var thanks = document.getElementById(form.getAttribute('data-thanks'));
+          form.classList.add('hide');
+          if(thanks) thanks.classList.add('show');
+        });
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key==='Escape'){ overlays.forEach(function(o){ if(o.classList.contains('open')) closeModal(o); }); }
+    });
+  })();
+</script>
+
+</body>
+</html>
