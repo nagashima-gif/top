@@ -47,6 +47,31 @@
   .btn-big:hover{background:var(--green);transform:translateY(-2px)}
   .cta-note{margin-top:12px;font-size:12.5px;color:var(--muted)}
 
+  /* fit checklist */
+  .fitgrid{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+  .fitgrid li{display:flex;align-items:flex-start;gap:10px;background:var(--tint2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-size:14px;color:#293a30}
+  .fitgrid li .ck{flex:none;color:var(--leaf);font-family:var(--disp);font-weight:900}
+  @media(max-width:600px){.fitgrid{grid-template-columns:1fr}}
+
+  /* case studies */
+  .case-list{margin-top:6px}
+  .case-item{border-top:1px solid var(--border);padding:24px 0}
+  .case-item:first-child{border-top:none;padding-top:10px}
+  .case-item .who{font-family:var(--disp);font-weight:900;font-size:15.5px;color:var(--ink)}
+  .case-item .who span{color:var(--muted);font-weight:500;font-size:13px}
+  .case-item p{color:#39473f;font-size:14.5px;margin-top:8px}
+  .case-item .pay{margin-top:10px;font-size:13.5px;font-weight:700;color:var(--green-deep);background:var(--tint2);display:inline-block;padding:5px 12px;border-radius:999px}
+  .case-note{margin-top:16px;font-size:12px;color:var(--muted)}
+
+  /* faq */
+  .faq{margin-top:6px}
+  details{background:#fff;border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden}
+  summary{list-style:none;cursor:pointer;padding:16px 20px;font-weight:700;font-size:14.5px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"＋";color:var(--leaf);font-family:var(--disp);font-weight:900;font-size:18px;transition:.2s;flex:none}
+  details[open] summary::after{transform:rotate(45deg)}
+  details .a{padding:0 20px 18px;color:var(--muted);font-size:14px;line-height:1.85}
+
   /* inline apply form (not a modal) */
   .apply-section{background:var(--tint2);margin-top:20px}
   .cform{max-width:600px;margin:0 auto;background:#fff;border-radius:16px;padding:32px 30px;box-shadow:0 8px 26px rgba(20,42,32,.08)}
@@ -142,8 +167,68 @@
   </div>
 
   <div class="block">
+    <h2>こんな方は、直接応募よりエージェントの利用がおすすめです。</h2>
+    <ul class="fitgrid">
+      <li><span class="ck">＋</span>今の職場に転職活動を知られたくない</li>
+      <li><span class="ck">＋</span>忙しくて求人をじっくり探す時間がない</li>
+      <li><span class="ck">＋</span>年収や勤務条件の交渉を自分で言い出しにくい</li>
+      <li><span class="ck">＋</span>今の年収・待遇が適正か分からない</li>
+      <li><span class="ck">＋</span>一人で転職活動を進めるのが不安</li>
+      <li><span class="ck">＋</span>まずは情報収集だけでもしておきたい</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>薬剤師バンクの転職支援事例</h2>
+    <div class="case-list">
+      <div class="case-item">
+        <div class="who">Y.S 様<span>｜20代後半・個人薬局 → 調剤チェーン</span></div>
+        <p>「土日は休みたいが、今の求人サイトでは希望条件の求人が見つからない」というご相談から、非公開求人の中でご希望に合う店舗をご紹介。条件交渉も代行し、早期のご転職につながりました。</p>
+        <span class="pay">年収 380万円 → 450万円</span>
+      </div>
+      <div class="case-item">
+        <div class="who">K.T 様<span>｜30代前半・ドラッグストア → 門前薬局（管理薬剤師）</span></div>
+        <p>管理薬剤師としてのキャリアアップを希望されていましたが、条件面の交渉に不安をお持ちでした。エージェントが薬局側と直接交渉し、希望年収以上での転職が実現しました。</p>
+        <span class="pay">年収 420万円 → 520万円＋管理薬剤師手当</span>
+      </div>
+      <div class="case-item">
+        <div class="who">M.O 様<span>｜40代前半・勤務先の閉店に伴う転職</span></div>
+        <p>長年勤めた薬局の閉店により転職が急務に。現役薬剤師が運営しているからこそ分かる、経験を活かせる薬局を短期間でご紹介し、スムーズな転職をサポートしました。</p>
+        <span class="pay">年収 450万円 → 480万円（残業時間も大幅減）</span>
+      </div>
+    </div>
+    <p class="case-note">※ 上記はイニシャルによる想定事例（ドラフト）です。実際の事例が集まり次第、差し替えます。</p>
+  </div>
+
+  <div class="block">
     <h2>まずはお気軽に、無料相談をお試しください。</h2>
     <p>在職中でお忙しい方も、まだ転職するか決めていない方も。まずはお話を伺うところから始めます。しつこい営業は一切いたしません。ご希望に合わなければ、それだけで終えていただいて構いません。</p>
+  </div>
+
+  <div class="block">
+    <h2>よくあるご質問</h2>
+    <div class="faq">
+      <details>
+        <summary>今すぐ転職を考えているわけではないのですが、相談しても良いですか？</summary>
+        <div class="a">もちろんです。転職の意思が固まっていない段階でのご相談も歓迎します。求人サイトだけでは分からない、現場のリアルな情報や非公開求人についてお伝えできます。まずは情報収集からでも大丈夫です。</div>
+      </details>
+      <details>
+        <summary>まずは求人情報だけ教えてほしいのですが。</summary>
+        <div class="a">現役薬剤師が運営しているからこそご紹介できる非公開求人が多数ございます。求人票だけでは伝わらない職場の雰囲気なども含めてお伝えしたいので、まずは簡単な面談の中でご希望・ご経験をお伺いできればと思います。</div>
+      </details>
+      <details>
+        <summary>相談した結果、応募しないという選択肢もありますか？</summary>
+        <div class="a">もちろん問題ございません。ご自身のタイミングで進めていただければと思います。無理に応募や転職をおすすめすることはありません。</div>
+      </details>
+      <details>
+        <summary>費用はかかりますか？</summary>
+        <div class="a">求職者の方の費用は完全無料です。ご相談・ご紹介から入社後まで、費用をいただくことは一切ありません。</div>
+      </details>
+      <details>
+        <summary>今の仕事を続けながら相談できますか？</summary>
+        <div class="a">はい。オンライン相談や平日夜・土日のご相談にも対応しています。在職中の方も多くご利用いただいています。</div>
+      </details>
+    </div>
   </div>
 
   <div class="cta-wrap">
