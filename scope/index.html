@@ -58,7 +58,7 @@
   .side-cta .menu-list a{display:block;padding:10px 0;font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--border)}
   .side-cta .menu-list a:last-child{border-bottom:none}
   .side-cta .menu-list a:hover{color:var(--green)}
-  .side-cta button,.side-cta a.cta-seeker{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:150px;padding:18px 10px;border:0;cursor:pointer;font-family:var(--disp);font-weight:700;font-size:13.5px;line-height:1.4;text-align:center;text-decoration:none}
+  .side-cta button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:150px;padding:18px 10px;border:0;cursor:pointer;font-family:var(--disp);font-weight:700;font-size:13.5px;line-height:1.4;text-align:center}
   .side-cta .cta-seeker{background:var(--leaf);color:#fff}
   .side-cta .cta-seeker:hover{background:var(--green)}
   .side-cta .cta-employer{background:var(--ink);color:#fff}
@@ -103,7 +103,7 @@
     <a href="../greeting/index.html">代表者挨拶</a>
     <a href="../resources/index.html">転職お役立ち資料</a>
   </nav>
-  <a href="../pharmacist/index.html" class="cta-seeker"><span class="ico">💬</span>転職エージェントに<br>無料相談</a>
+  <button type="button" class="cta-seeker" data-open="modal-seeker"><span class="ico">💬</span>転職エージェントに<br>無料相談</button>
   <button type="button" class="cta-employer" data-open="modal-employer"><span class="ico">🏥</span>薬剤師の採用を<br>検討している企業様</button>
 </div>
 
