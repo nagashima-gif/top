@@ -53,26 +53,6 @@
   .fitgrid li .ck{flex:none;color:var(--leaf);font-family:var(--disp);font-weight:900}
   @media(max-width:600px){.fitgrid{grid-template-columns:1fr}}
 
-  /* case studies */
-  .case-list{margin-top:6px}
-  .case-item{border-top:1px solid var(--border);padding:24px 0}
-  .case-item:first-child{border-top:none;padding-top:10px}
-  .case-item .who{font-family:var(--disp);font-weight:900;font-size:15.5px;color:var(--ink)}
-  .case-item .who span{color:var(--muted);font-weight:500;font-size:13px}
-  .case-item p{color:#39473f;font-size:14.5px;margin-top:8px}
-  .case-item .go{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--green);text-decoration:none}
-  .case-item .go:hover{text-decoration:underline}
-  .case-note{margin-top:16px;font-size:12px;color:var(--muted)}
-
-  /* faq */
-  .faq{margin-top:6px}
-  details{background:#fff;border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden}
-  summary{list-style:none;cursor:pointer;padding:16px 20px;font-weight:700;font-size:14.5px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-  summary::-webkit-details-marker{display:none}
-  summary::after{content:"＋";color:var(--leaf);font-family:var(--disp);font-weight:900;font-size:18px;transition:.2s;flex:none}
-  details[open] summary::after{transform:rotate(45deg)}
-  details .a{padding:0 20px 18px;color:var(--muted);font-size:14px;line-height:1.85}
-
   /* inline apply form (not a modal) */
   .apply-section{background:var(--tint2);margin-top:20px}
   .cform{max-width:600px;margin:0 auto;background:#fff;border-radius:16px;padding:32px 30px;box-shadow:0 8px 26px rgba(20,42,32,.08)}
@@ -161,56 +141,8 @@
   </div>
 
   <div class="block">
-    <h2>薬剤師バンクの採用支援事例</h2>
-    <div class="case-list">
-      <div class="case-item">
-        <div class="who">しんば薬局 蓮沼店 様<span>｜GIファーマシー株式会社・東京都板橋区・4店舗</span></div>
-        <p>急な欠員が出たときにすぐ動いてもらえたご相談から、お試し登用を経て正社員化。「また急に辞められたら」という不安が大きく減ったとのお声をいただきました。</p>
-        <a class="go" href="../voices/1.html">詳しく見る →</a>
-      </div>
-      <div class="case-item">
-        <div class="who">ひまわり調剤薬局 様<span>｜株式会社ひまわりメディカル・埼玉県川口市・1店舗</span></div>
-        <p>求人を出しても応募が来ず採用に苦戦されていましたが、お試し登用で実際に働いてもらってから決められる仕組みで、面接だけでは分からない相性まで確認いただけました。</p>
-        <a class="go" href="../voices/2.html">詳しく見る →</a>
-      </div>
-      <div class="case-item">
-        <div class="who">グリーン調剤薬局 様<span>｜株式会社グリーンファーマ・神奈川県内・12店舗</span></div>
-        <p>店舗拡大時の採用ミスマッチにお悩みでしたが、まず業務委託で入ってもらう仕組みにより採り直しコストが減り、出店スケジュールを崩さず採用できるようになりました。</p>
-        <a class="go" href="../voices/3.html">詳しく見る →</a>
-      </div>
-    </div>
-    <p class="case-note">※ 上記はご利用いただいた際に想定される声のサンプル（ドラフト）です。実際の事例が集まり次第、差し替えます。</p>
-  </div>
-
-  <div class="block">
     <h2>まずはお気軽に、無料相談をお試しください。</h2>
     <p>採用を急いでいない段階でのご相談も歓迎します。無理に採用をおすすめすることはありません。まずは今の状況をお聞かせください。</p>
-  </div>
-
-  <div class="block">
-    <h2>よくあるご質問</h2>
-    <div class="faq">
-      <details>
-        <summary>契約は、誰と結ぶのですか？</summary>
-        <div class="a">薬剤師の就業に関する契約は、薬局と薬剤師が直接締結します。当社はその間をつなぐ「あっせん」を行う立場で、薬剤師を当社の指揮命令下で派遣するものではありません。</div>
-      </details>
-      <details>
-        <summary>偽装請負など、違法にならないですか？</summary>
-        <div class="a">当社は有料職業紹介事業の許可（許可番号：08-ユ-300444）を保有し、適法な形でサービスを設計しています。薬剤師は薬局と直接契約し、労務管理・指揮命令は薬局側が行う建付けです。</div>
-      </details>
-      <details>
-        <summary>費用はどれくらいかかりますか？</summary>
-        <div class="a">初期費用・登録料は0円、完全成果報酬です。相談だけ、診断だけでも費用はかかりません。具体的な金額は薬局の状況に合わせてご案内します。</div>
-      </details>
-      <details>
-        <summary>最低利用期間や、しばりはありますか？</summary>
-        <div class="a">業務委託のサービス料は使った月だけ。長期契約のしばりはありません。合わなければ、いつでも終えられます。</div>
-      </details>
-      <details>
-        <summary>対応エリアを教えてください。</summary>
-        <div class="a">●●を中心に対応しています。エリア外でもオンライン相談は可能ですので、まずはお問い合わせください。</div>
-      </details>
-    </div>
   </div>
 
   <div class="cta-wrap">
