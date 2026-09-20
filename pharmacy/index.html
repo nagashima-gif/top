@@ -225,7 +225,7 @@
   .side-cta .menu-list a{display:block;padding:10px 0;font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--border)}
   .side-cta .menu-list a:last-child{border-bottom:none}
   .side-cta .menu-list a:hover{color:var(--green)}
-  .side-cta button,.side-cta a.cta-seeker{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:150px;padding:18px 10px;border:0;cursor:pointer;font-family:var(--disp);font-weight:700;font-size:13.5px;line-height:1.4;text-align:center;text-decoration:none}
+  .side-cta a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:150px;padding:18px 10px;border:0;cursor:pointer;font-family:var(--disp);font-weight:700;font-size:13.5px;line-height:1.4;text-align:center;text-decoration:none}
   .side-cta .cta-seeker{background:var(--leaf);color:#fff}
   .side-cta .cta-seeker:hover{background:var(--green)}
   .side-cta .cta-employer{background:var(--ink);color:#fff}
@@ -233,66 +233,6 @@
   .side-cta .ico{font-size:20px}
   @media(max-width:820px){.side-cta{display:none}}
 
-  /* modal */
-  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(21,42,32,.55);z-index:100;padding:24px;overflow-y:auto}
-  .modal-overlay.open{display:flex;align-items:flex-start;justify-content:center}
-  .modal{background:#fff;border-radius:16px;max-width:520px;width:100%;margin:20px 0;padding:32px 28px 28px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25)}
-  .modal-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border:1px solid var(--border);background:#fff;border-radius:8px;font-size:16px;color:var(--muted);cursor:pointer;display:grid;place-items:center}
-  .modal-close:hover{background:var(--tint2)}
-  .modal h3{font-size:20px;font-weight:900;color:var(--ink);margin-bottom:8px}
-  .modal .modal-sub{font-size:13.5px;color:var(--muted);margin-bottom:22px}
-  .modal label{display:block;font-size:13px;font-weight:700;color:var(--ink);margin:14px 0 6px}
-  .modal label .req{color:#d64545;margin-left:2px}
-  .modal input,.modal select,.modal textarea{width:100%;padding:11px 12px;border:1px solid var(--border);border-radius:8px;font-family:var(--body);font-size:14px;color:var(--ink);background:var(--tint2)}
-  .modal textarea{resize:vertical;min-height:80px}
-  .modal input:focus,.modal select:focus,.modal textarea:focus{outline:2px solid var(--leaf);outline-offset:1px;background:#fff}
-  .modal .submit-btn{margin-top:22px;width:100%;padding:14px;border:0;border-radius:999px;background:var(--green);color:#fff;font-family:var(--disp);font-weight:700;font-size:15px;cursor:pointer}
-  .modal .submit-btn:hover{background:var(--green-deep)}
-  .modal .thanks{display:none;text-align:center;padding:20px 0}
-  .modal .thanks.show{display:block}
-  .modal .thanks .ic{font-size:36px;color:var(--leaf);font-family:var(--disp);font-weight:900}
-  .modal .thanks p{margin-top:10px;color:var(--muted);font-size:14px}
-  .modal form.hide{display:none}
-
-  /* contact form */
-  .cform{max-width:620px;margin:26px auto 0;background:#fff;border-radius:16px;padding:28px 26px;text-align:left;color:var(--ink);box-shadow:0 14px 40px rgba(0,0,0,.2)}
-  .cform fieldset{border:none;margin-bottom:20px}
-  .cform legend{font-family:var(--disp);font-weight:700;font-size:15px;margin-bottom:12px;color:var(--ink)}
-  .chk label{display:flex;align-items:flex-start;gap:9px;background:var(--tint2);border:1px solid var(--border);border-radius:9px;padding:11px 14px;margin-bottom:8px;font-size:14px;font-weight:500;cursor:pointer;transition:.12s}
-  .chk label:hover{border-color:var(--leaf);background:var(--tint)}
-  .chk input{margin-top:4px;accent-color:var(--green);flex:none;width:17px;height:17px}
-  .cform .frow{margin-bottom:14px}
-  .cform .frow2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
-  .frow label,.frow2 label{display:block;font-size:13px;font-weight:700;color:var(--ink)}
-  .frow label span,.frow2 label span{font-weight:700;font-size:11px;color:#fff;background:var(--leaf);border-radius:4px;padding:1px 7px;margin-left:8px}
-  .frow label span.opt,.frow2 label span.opt{background:var(--muted)}
-  .cform input[type=text],.cform input[type=email],.cform input[type=tel],.cform textarea{width:100%;margin-top:7px;border:1.5px solid var(--border);border-radius:9px;padding:11px 13px;font-family:var(--body);font-size:15px;color:var(--ink);background:#fff}
-  .cform textarea{resize:vertical}
-  .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--leaf);box-shadow:0 0 0 3px rgba(47,162,106,.15)}
-  .consent{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin:4px 0 18px}
-  .consent input{accent-color:var(--green);width:16px;height:16px;flex:none}
-  .consent a{color:var(--green);text-decoration:underline}
-  .fbtn{width:100%;background:var(--leaf);color:#fff;border:none;font-family:var(--disp);font-weight:900;font-size:17px;padding:16px;border-radius:12px;cursor:pointer;transition:.15s}
-  .fbtn:hover{background:var(--green);transform:translateY(-1px)}
-  .cform small{display:block;text-align:center;color:var(--muted);font-size:12px;margin-top:12px}
-  @media(max-width:520px){.cform .frow2{grid-template-columns:1fr}}
-  /* service video */
-  .video-frame{max-width:760px;margin:36px auto 0}
-  .video-facade{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;cursor:pointer;background:linear-gradient(135deg,var(--green),var(--green-deep));display:grid;place-items:center;border:1px solid var(--border)}
-  .video-facade::before{content:"＋";position:absolute;font-family:var(--disp);font-weight:900;font-size:280px;color:#fff;opacity:.06;line-height:1}
-  .vf-inner{text-align:center;color:#fff;position:relative;z-index:1;padding:20px}
-  .vf-badge{display:inline-block;background:rgba(255,255,255,.14);border:1px dashed rgba(255,255,255,.5);border-radius:999px;padding:5px 14px;font-size:12px;font-weight:700;margin-bottom:18px}
-  .play{width:76px;height:76px;border-radius:50%;background:#fff;display:grid;place-items:center;margin:0 auto 16px;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:.15s}
-  .play span{color:var(--green);font-size:26px;margin-left:5px}
-  .video-facade:hover .play,.video-facade:focus-visible .play{transform:scale(1.08)}
-  .vf-note{font-size:14px;font-weight:600;color:#eafff3}
-  .vf-note small{font-weight:400;color:#bfe0cd;font-size:12px}
-  .video-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-  .draft-note{background:#FFF6E5;border:1px dashed var(--amber);color:#7a5410;font-size:12.5px;padding:10px 16px;text-align:center}
-  @media (prefers-reduced-motion:no-preference){
-    .reveal{opacity:0;transform:translateY(18px);transition:.6s ease}
-    .reveal.in{opacity:1;transform:none}
-  }
 </style>
 </head>
 <body>
@@ -308,7 +248,7 @@
     <a href="../resources/index.html">転職お役立ち資料</a>
   </nav>
   <a href="../agent/index.html" class="cta-seeker"><span class="ico">💬</span>転職エージェントに<br>無料相談</a>
-  <button type="button" class="cta-employer" data-open="modal-employer"><span class="ico">🏥</span>薬剤師の採用を<br>検討している企業様</button>
+  <a href="../employer/index.html" class="cta-employer"><span class="ico">🏥</span>薬剤師の採用を<br>検討している企業様</a>
 </div>
 
 <header>
@@ -664,129 +604,8 @@
 
 <div class="mcta"><a href="#contact">＋ 無料相談・お問い合わせ</a></div>
 
-<!-- MODAL: 求職者（薬剤師）向け 無料相談 -->
-<div class="modal-overlay" id="modal-seeker" aria-hidden="true">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-seeker-title">
-    <button type="button" class="modal-close" data-close aria-label="閉じる">✕</button>
-    <h3 id="modal-seeker-title">転職エージェントに無料相談</h3>
-    <p class="modal-sub">現役薬剤師のエージェントが、あなたに合う働き方をご提案します。ご相談は無料です。</p>
-    <form data-thanks="thanks-seeker">
-      <label>お名前<span class="req">*</span></label>
-      <input type="text" name="name" required placeholder="例：山田 太郎">
-      <label>生年月日</label>
-      <input type="date" name="birthday">
-      <label>保有資格<span class="req">*</span></label>
-      <select name="license" required>
-        <option value="">選択してください</option>
-        <option>薬剤師免許</option>
-        <option>薬剤師免許＋管理薬剤師資格</option>
-      </select>
-      <label>現在の勤務先</label>
-      <input type="text" name="workplace" placeholder="例：●●薬局">
-      <label>現年収（万円）</label>
-      <input type="number" name="salary" placeholder="例：500">
-      <label>希望する働き方</label>
-      <select name="style">
-        <option value="">選択してください</option>
-        <option>正社員</option>
-        <option>スポット・パート</option>
-        <option>業務委託・フリーランス</option>
-        <option>まだ決めていない</option>
-      </select>
-      <label>転職希望時期</label>
-      <select name="timing">
-        <option value="">選択してください</option>
-        <option>今すぐ</option>
-        <option>3ヶ月以内</option>
-        <option>半年以内</option>
-        <option>情報収集中</option>
-      </select>
-      <label>メールアドレス<span class="req">*</span></label>
-      <input type="email" name="email" required placeholder="例：sample@example.com">
-      <label>電話番号</label>
-      <input type="tel" name="tel" placeholder="例：090-0000-0000">
-      <button type="submit" class="submit-btn">無料相談を申し込む</button>
-    </form>
-    <div class="thanks" id="thanks-seeker">
-      <div class="ic">＋</div>
-      <p>お問い合わせありがとうございます。<br>担当エージェントより追ってご連絡いたします。</p>
-    </div>
-  </div>
-</div>
 
-<!-- MODAL: 企業（薬局）向け 採用相談 -->
-<div class="modal-overlay" id="modal-employer" aria-hidden="true">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-employer-title">
-    <button type="button" class="modal-close" data-close aria-label="閉じる">✕</button>
-    <h3 id="modal-employer-title">薬剤師の採用を検討している企業様</h3>
-    <p class="modal-sub">採用・急な欠員のお悩みも、現役薬剤師が運営するからこそ分かる視点でご提案します。</p>
-    <form data-thanks="thanks-employer">
-      <label>薬局・法人名<span class="req">*</span></label>
-      <input type="text" name="company" required placeholder="例：株式会社●●薬局">
-      <label>ご担当者名<span class="req">*</span></label>
-      <input type="text" name="contact-name" required placeholder="例：山田 太郎">
-      <label>対応エリア</label>
-      <input type="text" name="area" placeholder="例：東京都●●区">
-      <label>お困りごと</label>
-      <select name="issue">
-        <option value="">選択してください</option>
-        <option>急な欠員が出た</option>
-        <option>採用してもすぐ辞めてしまう</option>
-        <option>新規出店・増員での採用</option>
-        <option>その他</option>
-      </select>
-      <label>詳細・ご要望</label>
-      <textarea name="detail" placeholder="現在の状況やご希望の条件などをご記入ください"></textarea>
-      <label>メールアドレス<span class="req">*</span></label>
-      <input type="email" name="email" required placeholder="例：sample@example.com">
-      <label>電話番号</label>
-      <input type="tel" name="tel" placeholder="例：03-0000-0000">
-      <button type="submit" class="submit-btn">採用のご相談をする</button>
-    </form>
-    <div class="thanks" id="thanks-employer">
-      <div class="ic">＋</div>
-      <p>お問い合わせありがとうございます。<br>担当者より追ってご連絡いたします。</p>
-    </div>
-  </div>
-</div>
 
-<script>
-  (function(){
-    var overlays = document.querySelectorAll('.modal-overlay');
-    document.querySelectorAll('[data-open]').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        var target = document.getElementById(btn.getAttribute('data-open'));
-        if(!target) return;
-        target.classList.add('open');
-        target.setAttribute('aria-hidden','false');
-        document.body.style.overflow='hidden';
-      });
-    });
-    function closeModal(overlay){
-      overlay.classList.remove('open');
-      overlay.setAttribute('aria-hidden','true');
-      document.body.style.overflow='';
-    }
-    overlays.forEach(function(overlay){
-      overlay.addEventListener('click', function(e){ if(e.target===overlay) closeModal(overlay); });
-      overlay.querySelectorAll('[data-close]').forEach(function(btn){
-        btn.addEventListener('click', function(){ closeModal(overlay); });
-      });
-      var form = overlay.querySelector('form');
-      if(form){
-        form.addEventListener('submit', function(e){
-          e.preventDefault();
-          var thanks = document.getElementById(form.getAttribute('data-thanks'));
-          form.classList.add('hide');
-          if(thanks) thanks.classList.add('show');
-        });
-      }
-    });
-    document.addEventListener('keydown', function(e){
-      if(e.key==='Escape'){ overlays.forEach(function(o){ if(o.classList.contains('open')) closeModal(o); }); }
-    });
-  })();
-</script>
 
 <script>
   // voice slider

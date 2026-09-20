@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>転職エージェントに無料相談｜薬剤師バンク</title>
-<meta name="description" content="現役薬剤師が運営する薬剤師バンク。まずは無料相談から。">
+<title>薬剤師の採用を検討している企業様へ｜薬剤師バンク</title>
+<meta name="description" content="現役薬剤師が運営する薬剤師バンク。採用・急な欠員のご相談はこちらから。まずは無料相談から。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -43,8 +43,8 @@
   .block p{color:#39473f;font-size:15px}
 
   .cta-wrap{text-align:center;padding:20px 0 8px}
-  .btn-big{display:inline-flex;align-items:center;gap:8px;background:var(--leaf);color:#fff;font-family:var(--disp);font-weight:900;font-size:16px;text-decoration:none;padding:16px 40px;border-radius:999px;box-shadow:0 10px 26px rgba(20,42,32,.16);border:0;cursor:pointer;transition:.15s}
-  .btn-big:hover{background:var(--green);transform:translateY(-2px)}
+  .btn-big{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;font-family:var(--disp);font-weight:900;font-size:16px;text-decoration:none;padding:16px 40px;border-radius:999px;box-shadow:0 10px 26px rgba(20,42,32,.16);border:0;cursor:pointer;transition:.15s}
+  .btn-big:hover{background:#0c1b13;transform:translateY(-2px)}
   .cta-note{margin-top:12px;font-size:12.5px;color:var(--muted)}
 
   /* fit checklist */
@@ -60,7 +60,8 @@
   .case-item .who{font-family:var(--disp);font-weight:900;font-size:15.5px;color:var(--ink)}
   .case-item .who span{color:var(--muted);font-weight:500;font-size:13px}
   .case-item p{color:#39473f;font-size:14.5px;margin-top:8px}
-  .case-item .pay{margin-top:10px;font-size:13.5px;font-weight:700;color:var(--green-deep);background:var(--tint2);display:inline-block;padding:5px 12px;border-radius:999px}
+  .case-item .go{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--green);text-decoration:none}
+  .case-item .go:hover{text-decoration:underline}
   .case-note{margin-top:16px;font-size:12px;color:var(--muted)}
 
   /* faq */
@@ -80,9 +81,10 @@
   .cform label{display:block;font-size:13px;font-weight:700;color:var(--ink);margin:14px 0 6px}
   .cform label .req{color:#d64545;margin-left:2px}
   .cform input,.cform select,.cform textarea{width:100%;border:1.5px solid var(--border);border-radius:9px;padding:11px 13px;font-family:var(--body);font-size:15px;color:var(--ink);background:var(--tint2)}
+  .cform textarea{resize:vertical}
   .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--leaf);background:#fff;box-shadow:0 0 0 3px rgba(47,162,106,.15)}
-  .cform .fbtn{width:100%;margin-top:24px;background:var(--leaf);color:#fff;border:none;font-family:var(--disp);font-weight:900;font-size:16px;padding:15px;border-radius:12px;cursor:pointer;transition:.15s}
-  .cform .fbtn:hover{background:var(--green)}
+  .cform .fbtn{width:100%;margin-top:24px;background:var(--ink);color:#fff;border:none;font-family:var(--disp);font-weight:900;font-size:16px;padding:15px;border-radius:12px;cursor:pointer;transition:.15s}
+  .cform .fbtn:hover{background:#0c1b13}
   .cform small{display:block;text-align:center;color:var(--muted);font-size:12px;margin-top:12px}
   .thanks{display:none;text-align:center;padding:20px 0;max-width:600px;margin:0 auto;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(20,42,32,.08)}
   .thanks.show{display:block}
@@ -117,7 +119,7 @@
 </head>
 <body>
 
-<div class="draft-note">これは「転職エージェントに無料相談」導線の挟み込みページ（/agent/）のドラフトです。</div>
+<div class="draft-note">これは「薬剤師の採用を検討している企業様」導線の挟み込みページ（/employer/）のドラフトです。</div>
 
 <div class="side-cta">
   <nav class="menu-list">
@@ -127,8 +129,8 @@
     <a href="../greeting/index.html">代表者挨拶</a>
     <a href="../resources/index.html">転職お役立ち資料</a>
   </nav>
-  <a href="#apply" class="cta-seeker"><span class="ico">💬</span>転職エージェントに<br>無料相談</a>
-  <a href="../employer/index.html" class="cta-employer"><span class="ico">🏥</span>薬剤師の採用を<br>検討している企業様</a>
+  <a href="../agent/index.html" class="cta-seeker"><span class="ico">💬</span>転職エージェントに<br>無料相談</a>
+  <a href="#apply" class="cta-employer"><span class="ico">🏥</span>薬剤師の採用を<br>検討している企業様</a>
 </div>
 
 <header>
@@ -138,130 +140,121 @@
 </header>
 
 <div class="wrap">
-  <p class="crumb"><a href="../index.html">TOP</a> / 転職エージェントに無料相談</p>
+  <p class="crumb"><a href="../index.html">TOP</a> / 薬剤師の採用を検討している企業様</p>
 
   <div class="intro">
-    <h1>薬剤師バンクにご興味をお持ちの方へ</h1>
-    <p>私たちは、現役薬剤師が運営しているからこそ、薬局側の経営者・管理薬剤師と直接つながっています。</p>
-    <p>公開求人だけでは出会えない、あなたのご経験やご希望に合う働き方をご紹介できるかもしれません。</p>
+    <h1>薬剤師の採用をお考えの企業様へ</h1>
+    <p>私たちは、現役薬剤師が運営しているからこそ、薬局の現場が本当に必要としている人材が分かります。</p>
+    <p>急な欠員のご相談も、採用のやり方そのものの見直しも。まずはお気軽にご相談ください。</p>
   </div>
 
   <div class="block">
-    <h2>こんな方は、直接応募よりエージェントの利用がおすすめです。</h2>
+    <h2>こんな薬局・企業様に、ご利用いただいています。</h2>
     <ul class="fitgrid">
-      <li><span class="ck">＋</span>今の職場に転職活動を知られたくない</li>
-      <li><span class="ck">＋</span>忙しくて求人をじっくり探す時間がない</li>
-      <li><span class="ck">＋</span>年収や勤務条件の交渉を自分で言い出しにくい</li>
-      <li><span class="ck">＋</span>今の年収・待遇が適正か分からない</li>
-      <li><span class="ck">＋</span>一人で転職活動を進めるのが不安</li>
-      <li><span class="ck">＋</span>まずは情報収集だけでもしておきたい</li>
+      <li><span class="ck">＋</span>急な退職・欠員でシフトが埋まらない</li>
+      <li><span class="ck">＋</span>採用してもすぐ辞めてしまう（ミスマッチ）</li>
+      <li><span class="ck">＋</span>求人を出しても応募が来ない</li>
+      <li><span class="ck">＋</span>管理薬剤師が不在で、誰も休めない</li>
+      <li><span class="ck">＋</span>紹介会社の紹介料の負担が大きい</li>
+      <li><span class="ck">＋</span>店舗拡大にあわせて採用を強化したい</li>
     </ul>
   </div>
 
   <div class="block">
-    <h2>薬剤師バンクの転職支援事例</h2>
+    <h2>薬剤師バンクの採用支援事例</h2>
     <div class="case-list">
       <div class="case-item">
-        <div class="who">Y.S 様<span>｜20代後半・個人薬局 → 調剤チェーン</span></div>
-        <p>「土日は休みたいが、今の求人サイトでは希望条件の求人が見つからない」というご相談から、非公開求人の中でご希望に合う店舗をご紹介。条件交渉も代行し、早期のご転職につながりました。</p>
-        <span class="pay">年収 380万円 → 450万円</span>
+        <div class="who">しんば薬局 蓮沼店 様<span>｜GIファーマシー株式会社・東京都板橋区・4店舗</span></div>
+        <p>急な欠員が出たときにすぐ動いてもらえたご相談から、お試し登用を経て正社員化。「また急に辞められたら」という不安が大きく減ったとのお声をいただきました。</p>
+        <a class="go" href="../voices/1.html">詳しく見る →</a>
       </div>
       <div class="case-item">
-        <div class="who">K.T 様<span>｜30代前半・ドラッグストア → 門前薬局（管理薬剤師）</span></div>
-        <p>管理薬剤師としてのキャリアアップを希望されていましたが、条件面の交渉に不安をお持ちでした。エージェントが薬局側と直接交渉し、希望年収以上での転職が実現しました。</p>
-        <span class="pay">年収 420万円 → 520万円＋管理薬剤師手当</span>
+        <div class="who">ひまわり調剤薬局 様<span>｜株式会社ひまわりメディカル・埼玉県川口市・1店舗</span></div>
+        <p>求人を出しても応募が来ず採用に苦戦されていましたが、お試し登用で実際に働いてもらってから決められる仕組みで、面接だけでは分からない相性まで確認いただけました。</p>
+        <a class="go" href="../voices/2.html">詳しく見る →</a>
       </div>
       <div class="case-item">
-        <div class="who">M.O 様<span>｜40代前半・勤務先の閉店に伴う転職</span></div>
-        <p>長年勤めた薬局の閉店により転職が急務に。現役薬剤師が運営しているからこそ分かる、経験を活かせる薬局を短期間でご紹介し、スムーズな転職をサポートしました。</p>
-        <span class="pay">年収 450万円 → 480万円（残業時間も大幅減）</span>
+        <div class="who">グリーン調剤薬局 様<span>｜株式会社グリーンファーマ・神奈川県内・12店舗</span></div>
+        <p>店舗拡大時の採用ミスマッチにお悩みでしたが、まず業務委託で入ってもらう仕組みにより採り直しコストが減り、出店スケジュールを崩さず採用できるようになりました。</p>
+        <a class="go" href="../voices/3.html">詳しく見る →</a>
       </div>
     </div>
-    <p class="case-note">※ 上記はイニシャルによる想定事例（ドラフト）です。実際の事例が集まり次第、差し替えます。</p>
+    <p class="case-note">※ 上記はご利用いただいた際に想定される声のサンプル（ドラフト）です。実際の事例が集まり次第、差し替えます。</p>
   </div>
 
   <div class="block">
     <h2>まずはお気軽に、無料相談をお試しください。</h2>
-    <p>在職中でお忙しい方も、まだ転職するか決めていない方も。まずはお話を伺うところから始めます。しつこい営業は一切いたしません。ご希望に合わなければ、それだけで終えていただいて構いません。</p>
+    <p>採用を急いでいない段階でのご相談も歓迎します。無理に採用をおすすめすることはありません。まずは今の状況をお聞かせください。</p>
   </div>
 
   <div class="block">
     <h2>よくあるご質問</h2>
     <div class="faq">
       <details>
-        <summary>今すぐ転職を考えているわけではないのですが、相談しても良いですか？</summary>
-        <div class="a">もちろんです。転職の意思が固まっていない段階でのご相談も歓迎します。求人サイトだけでは分からない、現場のリアルな情報や非公開求人についてお伝えできます。まずは情報収集からでも大丈夫です。</div>
+        <summary>契約は、誰と結ぶのですか？</summary>
+        <div class="a">薬剤師の就業に関する契約は、薬局と薬剤師が直接締結します。当社はその間をつなぐ「あっせん」を行う立場で、薬剤師を当社の指揮命令下で派遣するものではありません。</div>
       </details>
       <details>
-        <summary>まずは求人情報だけ教えてほしいのですが。</summary>
-        <div class="a">現役薬剤師が運営しているからこそご紹介できる非公開求人が多数ございます。求人票だけでは伝わらない職場の雰囲気なども含めてお伝えしたいので、まずは簡単な面談の中でご希望・ご経験をお伺いできればと思います。</div>
+        <summary>偽装請負など、違法にならないですか？</summary>
+        <div class="a">当社は有料職業紹介事業の許可（許可番号：08-ユ-300444）を保有し、適法な形でサービスを設計しています。薬剤師は薬局と直接契約し、労務管理・指揮命令は薬局側が行う建付けです。</div>
       </details>
       <details>
-        <summary>相談した結果、応募しないという選択肢もありますか？</summary>
-        <div class="a">もちろん問題ございません。ご自身のタイミングで進めていただければと思います。無理に応募や転職をおすすめすることはありません。</div>
+        <summary>費用はどれくらいかかりますか？</summary>
+        <div class="a">初期費用・登録料は0円、完全成果報酬です。相談だけ、診断だけでも費用はかかりません。具体的な金額は薬局の状況に合わせてご案内します。</div>
       </details>
       <details>
-        <summary>費用はかかりますか？</summary>
-        <div class="a">求職者の方の費用は完全無料です。ご相談・ご紹介から入社後まで、費用をいただくことは一切ありません。</div>
+        <summary>最低利用期間や、しばりはありますか？</summary>
+        <div class="a">業務委託のサービス料は使った月だけ。長期契約のしばりはありません。合わなければ、いつでも終えられます。</div>
       </details>
       <details>
-        <summary>今の仕事を続けながら相談できますか？</summary>
-        <div class="a">はい。オンライン相談や平日夜・土日のご相談にも対応しています。在職中の方も多くご利用いただいています。</div>
+        <summary>対応エリアを教えてください。</summary>
+        <div class="a">●●を中心に対応しています。エリア外でもオンライン相談は可能ですので、まずはお問い合わせください。</div>
       </details>
     </div>
   </div>
 
   <div class="cta-wrap">
-    <a href="#apply" class="btn-big">＋ 無料相談に進む</a>
-    <p class="cta-note">相談だけでもOK／完全無料／今の仕事を続けながら進められます</p>
+    <a href="#apply" class="btn-big">＋ 採用のご相談に進む</a>
+    <p class="cta-note">相談だけでもOK／初期費用0円／無理に採用をおすすめすることはありません</p>
   </div>
 </div>
 
 <section class="apply-section" id="apply">
   <div class="wrap" style="padding:44px 0">
-    <form class="cform" data-thanks="thanks-seeker">
-      <h3>転職エージェントに無料相談</h3>
-      <p class="sub">現役薬剤師のエージェントが、あなたに合う働き方をご提案します。ご相談は無料です。</p>
-      <label>お名前<span class="req">*</span></label>
-      <input type="text" name="name" required placeholder="例：山田 太郎">
-      <label>生年月日</label>
-      <input type="date" name="birthday">
-      <label>保有資格<span class="req">*</span></label>
-      <select name="license" required>
+    <form class="cform" data-thanks="thanks-employer">
+      <h3>薬剤師の採用を検討している企業様</h3>
+      <p class="sub">採用・急な欠員のお悩みも、現役薬剤師が運営するからこそ分かる視点でご提案します。</p>
+      <label>姓<span class="req">*</span></label>
+      <input type="text" name="last-name" required placeholder="例：山田">
+      <label>名<span class="req">*</span></label>
+      <input type="text" name="first-name" required placeholder="例：太郎">
+      <label>会社名（薬局名）<span class="req">*</span></label>
+      <input type="text" name="company" required placeholder="例：株式会社●●薬局">
+      <label>役職</label>
+      <input type="text" name="position" placeholder="例：店舗管理者">
+      <label>対応エリア</label>
+      <input type="text" name="area" placeholder="例：東京都●●区">
+      <label>お困りごと</label>
+      <select name="issue">
         <option value="">選択してください</option>
-        <option>薬剤師免許</option>
-        <option>薬剤師免許＋管理薬剤師資格</option>
+        <option>急な欠員が出た</option>
+        <option>採用してもすぐ辞めてしまう</option>
+        <option>求人を出しても応募が来ない</option>
+        <option>新規出店・増員での採用</option>
+        <option>その他</option>
       </select>
-      <label>現在の勤務先</label>
-      <input type="text" name="workplace" placeholder="例：●●薬局">
-      <label>現年収（万円）</label>
-      <input type="number" name="salary" placeholder="例：500">
-      <label>希望する働き方</label>
-      <select name="style">
-        <option value="">選択してください</option>
-        <option>正社員</option>
-        <option>スポット・パート</option>
-        <option>業務委託・フリーランス</option>
-        <option>まだ決めていない</option>
-      </select>
-      <label>転職希望時期</label>
-      <select name="timing">
-        <option value="">選択してください</option>
-        <option>今すぐ</option>
-        <option>3ヶ月以内</option>
-        <option>半年以内</option>
-        <option>情報収集中</option>
-      </select>
+      <label>詳細・ご要望</label>
+      <textarea name="detail" rows="4" placeholder="現在の状況やご希望の条件などをご記入ください"></textarea>
       <label>メールアドレス<span class="req">*</span></label>
       <input type="email" name="email" required placeholder="例：sample@example.com">
-      <label>電話番号</label>
-      <input type="tel" name="tel" placeholder="例：090-0000-0000">
-      <button type="submit" class="fbtn">無料相談を申し込む</button>
-      <small>しつこい営業はしません／相談だけでもOK／通常1〜2営業日でご返信します</small>
+      <label>お電話番号</label>
+      <input type="tel" name="tel" placeholder="例：03-0000-0000">
+      <button type="submit" class="fbtn">採用のご相談をする</button>
+      <small>しつこい営業はしません／ご相談だけでもOK／通常1〜2営業日でご返信します</small>
     </form>
-    <div class="thanks" id="thanks-seeker">
+    <div class="thanks" id="thanks-employer">
       <div class="ic">＋</div>
-      <p>お問い合わせありがとうございます。<br>担当エージェントより追ってご連絡いたします。</p>
+      <p>お問い合わせありがとうございます。<br>担当者より追ってご連絡いたします。</p>
     </div>
   </div>
 </section>
