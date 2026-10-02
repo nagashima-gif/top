@@ -43,7 +43,36 @@
   .res-card p{font-size:13.5px;color:var(--muted);flex:1}
   .res-card .dl{margin-top:14px;display:inline-block;text-align:center;background:var(--green);color:#fff;font-family:var(--disp);font-weight:700;font-size:13.5px;padding:10px 18px;border-radius:999px;text-decoration:none}
   .res-card .dl:hover{background:var(--green-deep)}
+  .res-card button.dl{border:0;cursor:pointer;width:100%}
   @media(max-width:640px){.res-grid{grid-template-columns:1fr}}
+
+  /* download modal */
+  .dl-modal{position:fixed;inset:0;z-index:200;background:rgba(21,42,32,.55);display:none;align-items:center;justify-content:center;padding:16px}
+  .dl-modal.open{display:flex}
+  .dl-box{background:#fff;border-radius:16px;width:100%;max-width:480px;max-height:calc(100vh - 32px);overflow-y:auto;padding:28px 26px;position:relative;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+  .dl-close{position:absolute;top:10px;right:12px;border:0;background:none;font-size:24px;line-height:1;color:var(--muted);cursor:pointer;padding:6px}
+  .dl-box .cat{font-size:11.5px;font-weight:700;color:var(--leaf)}
+  .dl-box h2{font-size:18px;font-weight:900;margin:4px 0 6px;padding-right:24px}
+  .dl-box .sub{font-size:13px;color:var(--muted);margin-bottom:16px}
+  .dl-form label{display:block;font-size:13px;font-weight:700;margin:12px 0 6px}
+  .dl-form label .req{display:inline-block;font-size:11px;color:#d64545;background:rgba(214,69,69,.08);padding:1px 7px;border-radius:5px;margin-left:6px}
+  .dl-form label .opt{display:inline-block;font-size:11px;color:var(--muted);background:var(--tint2);padding:1px 7px;border-radius:5px;margin-left:6px}
+  .dl-form input[type=email],.dl-form input[type=text],.dl-form select{width:100%;border:1.5px solid var(--border);border-radius:9px;padding:10px 12px;font-family:var(--body);font-size:15px;color:var(--ink);background:var(--tint2)}
+  .dl-form input:focus,.dl-form select:focus{outline:none;border-color:var(--leaf);background:#fff;box-shadow:0 0 0 3px rgba(47,162,106,.15)}
+  .dl-form .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .dl-form .check{display:flex;align-items:flex-start;gap:8px;font-size:13px;font-weight:400;color:var(--ink);margin:12px 0 0;cursor:pointer}
+  .dl-form .check input{margin-top:4px;flex:none;accent-color:var(--leaf)}
+  .dl-form .check a{color:var(--green);text-decoration:underline}
+  .dl-form .submit{width:100%;margin-top:18px;background:var(--green);color:#fff;border:0;font-family:var(--disp);font-weight:900;font-size:15px;padding:14px;border-radius:12px;cursor:pointer}
+  .dl-form .submit:hover{background:var(--green-deep)}
+  .dl-done{display:none;text-align:center}
+  .dl-done.show{display:block}
+  .dl-done .ok{font-family:var(--disp);font-weight:900;font-size:17px;color:var(--green);margin:6px 0 14px}
+  .dl-done .get{display:block;background:var(--green);color:#fff;font-family:var(--disp);font-weight:900;font-size:15px;padding:14px;border-radius:12px;text-decoration:none}
+  .dl-done .get:hover{background:var(--green-deep)}
+  .dl-done .line-box{margin-top:18px;background:var(--tint2);border-radius:12px;padding:16px}
+  .dl-done .line-box p{font-size:13px;color:var(--muted);margin-bottom:10px}
+  .dl-done .line-btn{display:block;background:#06C755;color:#fff;font-weight:700;font-size:14.5px;padding:12px;border-radius:10px;text-decoration:none}
 
   footer{background:var(--ink);color:#9fb4a8;padding:40px 0 50px;font-size:13px;border-top:1px solid rgba(255,255,255,.08);margin-top:50px}
   footer .wrap{max-width:1040px}
@@ -97,32 +126,73 @@
   <h1 class="page-title">転職お役立ち資料</h1>
   <p class="lead">薬剤師の転職・キャリアづくりに役立つ資料を、無料でダウンロードいただけます。</p>
 
-  <div class="draft-note">このページはドラフトです。資料本体（PDF等）とダウンロードの仕組みは今後追加予定です。</div>
+  <div class="draft-note">このページはドラフトです。資料はサンプル版（ダミー）、フォームはHubSpot未接続の仮版です。</div>
 
   <div class="res-grid">
     <div class="res-card">
       <span class="cat">転職ガイド</span>
       <h3>薬剤師の転職成功ガイド</h3>
       <p>転職の進め方から面接対策まで、はじめての転職でも迷わないための基本をまとめました。</p>
-      <a class="dl" href="#">ダウンロード（準備中）</a>
+      <button type="button" class="dl" data-pdf="pdf/guide.pdf">無料でダウンロード</button>
     </div>
     <div class="res-card">
       <span class="cat">年収・待遇</span>
       <h3>薬剤師の年収相場データ集</h3>
       <p>働き方・エリア別の年収相場をまとめた資料です。条件交渉の参考にご活用ください。</p>
-      <a class="dl" href="#">ダウンロード（準備中）</a>
+      <button type="button" class="dl" data-pdf="pdf/salary.pdf">無料でダウンロード</button>
     </div>
     <div class="res-card">
       <span class="cat">面接対策</span>
       <h3>面接でよく聞かれる質問チェックリスト</h3>
       <p>薬局・調剤薬局の面接でよく聞かれる質問と回答のポイントをまとめました。</p>
-      <a class="dl" href="#">ダウンロード（準備中）</a>
+      <button type="button" class="dl" data-pdf="pdf/interview.pdf">無料でダウンロード</button>
     </div>
     <div class="res-card">
       <span class="cat">働き方</span>
       <h3>正社員・スポット・業務委託の違いが分かる資料</h3>
       <p>それぞれの働き方のメリット・デメリットを比較し、自分に合う働き方を見つけるための資料です。</p>
-      <a class="dl" href="#">ダウンロード（準備中）</a>
+      <button type="button" class="dl" data-pdf="pdf/workstyle.pdf">無料でダウンロード</button>
+    </div>
+  </div>
+</div>
+
+<div class="dl-modal" id="dl-modal" role="dialog" aria-modal="true" aria-labelledby="dl-title">
+  <div class="dl-box">
+    <button type="button" class="dl-close" aria-label="閉じる">×</button>
+    <span class="cat" id="dl-cat"></span>
+    <h2 id="dl-title"></h2>
+    <div id="dl-step-form">
+      <p class="sub">ご入力いただくと、すぐにダウンロードできます。</p>
+      <div id="hs-dl-form"></div>
+      <form class="dl-form" id="dl-fallback">
+        <label>メールアドレス<span class="req">必須</span></label>
+        <input type="email" name="email" required autocomplete="email" placeholder="例：sample@example.com">
+        <div class="row2">
+          <div><label>姓<span class="req">必須</span></label><input type="text" name="lastname" required autocomplete="family-name" placeholder="山田"></div>
+          <div><label>名<span class="req">必須</span></label><input type="text" name="firstname" required autocomplete="given-name" placeholder="花子"></div>
+        </div>
+        <label>転職希望時期<span class="opt">任意</span></label>
+        <select name="tensyokujiki">
+          <option value="">選択してください</option>
+          <option value="true">すぐ</option>
+          <option value="false">半年以内</option>
+          <option value="いいところがあれば">いいところがあれば</option>
+          <option value="その他">その他</option>
+        </select>
+        <input type="hidden" name="shubetsu" value="候補者">
+        <input type="hidden" name="ryunyukeiro" value="">
+        <label class="check"><input type="checkbox" name="mailmaga" value="yes">薬剤師向けのお役立ち情報（メールマガジン）を受け取る</label>
+        <label class="check"><input type="checkbox" required><span><a href="../privacy/index.html" target="_blank" rel="noopener">個人情報の取扱い</a>に同意する</span></label>
+        <button type="submit" class="submit">資料をダウンロードする</button>
+      </form>
+    </div>
+    <div class="dl-done" id="dl-step-done">
+      <p class="ok">ダウンロードの準備ができました</p>
+      <a class="get" id="dl-get" href="#" target="_blank" rel="noopener">PDFを開く</a>
+      <div class="line-box">
+        <p>非公開求人のご案内や面談のご連絡は、LINEでお届けしています。</p>
+        <a class="line-btn" id="dl-line" href="#" target="_blank" rel="noopener">LINEで友だち追加する</a>
+      </div>
     </div>
   </div>
 </div>
@@ -143,6 +213,100 @@
     <div>株式会社CiEL　｜　有料職業紹介事業許可番号：08-ユ-300444　｜　© 薬剤師バンク</div>
   </div>
 </footer>
+
+<script>
+(function(){
+  // HubSpotで「資料ダウンロード（薬剤師向け）」フォームを作成したら、そのGUIDを貼るだけで本番フォームに切り替わる。
+  // そのフォームには隠しフィールド「種別（shubetsu）」「登録経路（ryunyukeiro）」を入れておくこと。
+  var HS_PORTAL_ID = '244564717';
+  var HS_FORM_ID = '';
+  var LINE_URL = '#'; // ●LINE公式アカウントの友だち追加URL
+
+  var modal = document.getElementById('dl-modal');
+  var fallback = document.getElementById('dl-fallback');
+  var stepForm = document.getElementById('dl-step-form');
+  var stepDone = document.getElementById('dl-step-done');
+  document.getElementById('dl-line').href = LINE_URL;
+  if (HS_FORM_ID) fallback.parentNode.removeChild(fallback);
+
+  function loadHubSpot(cb){
+    if (window.hbspt) return cb();
+    var s = document.createElement('script');
+    s.src = 'https://js-na2.hsforms.net/forms/embed/v2.js';
+    s.onload = cb;
+    document.head.appendChild(s);
+  }
+
+  function setField(form, name, value){
+    var el = form.querySelector('input[name="' + name + '"]');
+    if (!el) return;
+    el.value = value;
+    el.dispatchEvent(new Event('input', {bubbles: true}));
+    el.dispatchEvent(new Event('change', {bubbles: true}));
+  }
+
+  function showDone(){
+    stepForm.hidden = true;
+    stepDone.classList.add('show');
+  }
+
+  function openModal(btn){
+    var card = btn.closest('.res-card');
+    var title = card.querySelector('h3').textContent;
+    var source = '資料DL：' + title;
+    document.getElementById('dl-cat').textContent = card.querySelector('.cat').textContent;
+    document.getElementById('dl-title').textContent = title;
+    document.getElementById('dl-get').href = btn.getAttribute('data-pdf');
+    stepForm.hidden = false;
+    stepDone.classList.remove('show');
+
+    if (HS_FORM_ID) {
+      document.getElementById('hs-dl-form').innerHTML = '';
+      loadHubSpot(function(){
+        hbspt.forms.create({
+          region: 'na2',
+          portalId: HS_PORTAL_ID,
+          formId: HS_FORM_ID,
+          target: '#hs-dl-form',
+          onFormReady: function($form){
+            var form = $form.jquery ? $form[0] : $form;
+            setField(form, 'shubetsu', '候補者');
+            setField(form, 'ryunyukeiro', source);
+          },
+          onFormSubmitted: showDone
+        });
+      });
+    } else {
+      fallback.reset();
+      fallback.elements.ryunyukeiro.value = source;
+    }
+
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    (modal.querySelector('input[type=email]') || modal.querySelector('.dl-close')).focus();
+  }
+
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.res-card .dl').forEach(function(btn){
+    btn.addEventListener('click', function(){ openModal(btn); });
+  });
+  modal.querySelector('.dl-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+  if (!HS_FORM_ID) {
+    fallback.addEventListener('submit', function(e){
+      e.preventDefault();
+      showDone();
+    });
+  }
+})();
+</script>
 
 
 
